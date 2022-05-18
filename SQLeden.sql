@@ -95,9 +95,21 @@ GO
 ALTER TABLE Classes
 ADD CONSTRAINT Min_check CHECK (Level>0);
 GO
+CREATE TABLE Users
+(
+	User_ID varchar(50) PRIMARY KEY,
+	HoTen nvarchar(50) not null,
+	DiaChi nvarchar(50) ,
+	DoB date not null,
+	Password nvarchar(50) not null,
+	Token varchar(20) NULL,
+	Admin bit DEFAULT '0',
+)
+GO
 CREATE TABLE Classes_build
 (
 	Build_ID varchar(10) PRIMARY KEY,
+	User_ID varchar(50) FOREIGN KEY REFERENCES Users(User_ID) ,
 	Class_ID nvarchar(10) NOT NULL FOREIGN KEY REFERENCES Classes(Class_ID),
 	Head_ID nvarchar(10) FOREIGN KEY REFERENCES Armor_info(A_ID),
 	Chest_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID),
@@ -123,34 +135,7 @@ CREATE TABLE Classes_build
 	Fai smallint NOT NULL,	
 )
 GO
-CREATE TABLE Users
-(
-	User_ID varchar(50) PRIMARY KEY,
-	HoTen nvarchar(50) not null,
-	DiaChi nvarchar(50) ,
-	DoB date not null,
-	Password nvarchar(50) not null,
-)
-GO
-CREATE TABLE Roles
-(
-	Roles_ID varchar(10) PRIMARY KEY,
-	Role_Des nvarchar(100),
-	Roles_power smallint,
-)
-GO
-CREATE TABLE User_Role
-(
-	User_ID varchar(50) FOREIGN KEY REFERENCES Users(User_ID) ,
-	Roles_ID varchar(10) FOREIGN KEY REFERENCES Roles(Roles_ID),
-)
-GO
-CREATE TABLE User_Build
-(
-	User_ID varchar(50) FOREIGN KEY REFERENCES Users(User_ID) ,
-	Build_ID varchar(10) NOT NULL FOREIGN KEY REFERENCES Classes_build(Build_ID) ,
-)
-GO
+
 CREATE TABLE Comment
 (
 	Comment_ID varchar(20) PRIMARY KEY,
@@ -174,8 +159,8 @@ CREATE TABLE User_Feed
 	User_ID varchar(50) NOT NULL FOREIGN KEY REFERENCES Users(User_ID) ,
 	Feed_Date date ,
 )
-ALter table Users
-ADD Token varchar(20) NULL
+
+
 
 
 
