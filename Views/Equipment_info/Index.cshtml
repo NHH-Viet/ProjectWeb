@@ -129,9 +129,9 @@
         @Html.DisplayFor(modelItem => item.SKill_Cost)
     </td>
     <td>
-        @if(!ViewBag.isUser) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
+        @if(!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
 
-        @if(!ViewBag.isUser) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
+        @if(!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
           
        
     </td>
