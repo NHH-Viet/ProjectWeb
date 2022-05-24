@@ -1,0 +1,48 @@
+﻿@model IEnumerable<projectE.Models.Equipment_Type>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type_Names)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+        string tenitem = "parrying_dagger_";
+        string duoi = "_weapon_elden_ring_wiki_guide_200px.png";
+        string than = item.Type_Names;
+        string result = dau + tenitem + than + duoi;
+
+        <tr>
+            <td>
+                <img src="@result" alt="Alternate Text" />
+              
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type_Names)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ET_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ET_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ET_ID })
+                @Html.ActionLink("info", "Index", "Equipment_info", new { id = item.ET_ID }, "")
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model projectE.Models.Ring
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ring</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ring_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ring_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weigth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weigth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Effect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Effect)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ring_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EDEN_RINGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Armor_info">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="A_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Inmunity" Type="smallint" />
+          <Property Name="Robustness" Type="smallint" />
+          <Property Name="Focus" Type="smallint" />
+          <Property Name="Vitality" Type="smallint" />
+          <Property Name="Poise" Type="smallint" />
+          <Property Name="Phy_guard" Type="smallint" />
+          <Property Name="Phy_slash" Type="smallint" />
+          <Property Name="Phy_strike" Type="smallint" />
+          <Property Name="Phy_thurst" Type="smallint" />
+          <Property Name="Mag_guard" Type="smallint" />
+          <Property Name="Fie_guard" Type="smallint" />
+          <Property Name="Holy_guard" Type="smallint" />
+          <Property Name="Weigth" Type="float" Nullable="false" />
+          <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Classes">
+          <Key>
+            <PropertyRef Name="Class_ID" />
+          </Key>
+          <Property Name="Class_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Class_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vigor" Type="smallint" Nullable="false" />
+          <Property Name="Mind" Type="smallint" Nullable="false" />
+          <Property Name="Endurance" Type="smallint" Nullable="false" />
+          <Property Name="Strength" Type="smallint" Nullable="false" />
+          <Property Name="Dex" Type="smallint" Nullable="false" />
+          <Property Name="Intell" Type="smallint" Nullable="false" />
+          <Property Name="Fai" Type="smallint" Nullable="false" />
+          <Property Name="Levels" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Classes_build">
+          <Key>
+            <PropertyRef Name="Build_ID" />
+          </Key>
+          <Property Name="Build_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="User_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Class_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Head_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Chest_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Hand_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Leg_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Left_hand1_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Left_hand2_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Left_hand3_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Right_hand1_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Right_hand2_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Right_hand3_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ring1_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ring2_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ring3_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ring4_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Levels" Type="smallint" Nullable="false" />
+          <Property Name="Vigor" Type="smallint" Nullable="false" />
+          <Property Name="Mind" Type="smallint" Nullable="false" />
+          <Property Name="Endurance" Type="smallint" Nullable="false" />
+          <Property Name="Strength" Type="smallint" Nullable="false" />
+          <Property Name="Dex" Type="smallint" Nullable="false" />
+          <Property Name="Intell" Type="smallint" Nullable="false" />
+          <Property Name="Fai" Type="smallint" Nullable="false" />
+          <Property Name="HienThi" Type="bit" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Name="Comment_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Pages" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="User_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Texts" Type="nvarchar" MaxLength="1" />
+          <Property Name="C_Date" Type="date" />
+          <Property Name="Likes" Type="int" />
+        </EntityType>
+        <EntityType Name="Equipment_info">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="E_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phy_dame" Type="smallint" Nullable="false" />
+          <Property Name="Phy_guard" Type="smallint" />
+          <Property Name="Mag_dame" Type="smallint" />
+          <Property Name="Mag_guard" Type="smallint" />
+          <Property Name="Fire_dame" Type="smallint" />
+          <Property Name="Fire_guard" Type="smallint" />
+          <Property Name="Ligh_dame" Type="smallint" />
+          <Property Name="Ligh_guard" Type="smallint" />
+          <Property Name="Holy_dame" Type="smallint" />
+          <Property Name="Holy_guard" Type="smallint" />
+          <Property Name="Critboot" Type="smallint" />
+          <Property Name="Guardboot" Type="smallint" />
+          <Property Name="Weigth" Type="float" />
+          <Property Name="Scl_Str" Type="char" MaxLength="1" />
+          <Property Name="Scl_Dex" Type="char" MaxLength="1" />
+          <Property Name="Scl_Int" Type="char" MaxLength="1" />
+          <Property Name="Scl_Fai" Type="char" MaxLength="1" />
+          <Property Name="R_Scl_Str" Type="smallint" />
+          <Property Name="R_Scl_Dex" Type="smallint" />
+          <Property Name="R_Scl_Int" Type="smallint" />
+          <Property Name="R_Scl_Fai" Type="smallint" />
+          <Property Name="SKill_Cost" Type="nvarchar" MaxLength="20" />
+          <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Equipment_Type">
+          <Key>
+            <PropertyRef Name="ET_ID" />
+          </Key>
+          <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Type_Names" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Likes">
+          <Key>
+            <PropertyRef Name="Like_ID" />
+          </Key>
+          <Property Name="Like_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Comment_ID" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Ring">
+          <Key>
+            <PropertyRef Name="Ring_ID" />
+          </Key>
+          <Property Name="Ring_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Ring_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Weigth" Type="float" Nullable="false" />
+          <Property Name="Effect" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="User_Feed">
+          <Key>
+            <PropertyRef Name="Feed_ID" />
+          </Key>
+          <Property Name="Feed_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Comment_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="User_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Feed_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoB" Type="date" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Token" Type="varchar" MaxLength="20" />
+          <Property Name="Admin" Type="bit" />
+        </EntityType>
+        <Association Name="FK__Armor_inf__ET_ID__2A4B4B5E">
+          <End Role="Equipment_Type" Type="Self.Equipment_Type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_Type">
+              <PropertyRef Name="ET_ID" />
+            </Principal>
+            <Dependent Role="Armor_info">
+              <PropertyRef Name="ET_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Chest__36B12243">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Chest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Class__34C8D9D1">
+          <End Role="Classes" Type="Self.Classes" Multiplicity="1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="Class_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Class_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Hand___37A5467C">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Hand_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Head___35BCFE0A">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Head_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___398D8EEE">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___3A81B327">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___3B75D760">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Leg_I__38996AB5">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Leg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3C69FB99">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3D5E1FD2">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3E52440B">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring1__3F466844">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring2__403A8C7D">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring3__412EB0B6">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring4__4222D4EF">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring4_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__User___33D4B598">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Comment__User_ID__44FF419A">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Equipment__ET_ID__267ABA7A">
+          <End Role="Equipment_Type" Type="Self.Equipment_Type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_Type">
+              <PropertyRef Name="ET_ID" />
+            </Principal>
+            <Dependent Role="Equipment_info">
+              <PropertyRef Name="ET_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Likes__Comment_I__47DBAE45">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="0..1" />
+          <End Role="Likes" Type="Self.Likes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Comment_ID" />
+            </Principal>
+            <Dependent Role="Likes">
+              <PropertyRef Name="Comment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User_Feed__Comme__4AB81AF0">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="1" />
+          <End Role="User_Feed" Type="Self.User_Feed" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Comment_ID" />
+            </Principal>
+            <Dependent Role="User_Feed">
+              <PropertyRef Name="Comment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User_Feed__User___4BAC3F29">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="User_Feed" Type="Self.User_Feed" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="User_Feed">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="EDEN_RINGModelStoreContainer">
+          <EntitySet Name="Armor_info" EntityType="Self.Armor_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Classes_build" EntityType="Self.Classes_build" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equipment_info" EntityType="Self.Equipment_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equipment_Type" EntityType="Self.Equipment_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Likes" EntityType="Self.Likes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ring" EntityType="Self.Ring" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Feed" EntityType="Self.User_Feed" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Armor_inf__ET_ID__2A4B4B5E" Association="Self.FK__Armor_inf__ET_ID__2A4B4B5E">
+            <End Role="Equipment_Type" EntitySet="Equipment_Type" />
+            <End Role="Armor_info" EntitySet="Armor_info" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Chest__36B12243" Association="Self.FK__Classes_b__Chest__36B12243">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Class__34C8D9D1" Association="Self.FK__Classes_b__Class__34C8D9D1">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Hand___37A5467C" Association="Self.FK__Classes_b__Hand___37A5467C">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Head___35BCFE0A" Association="Self.FK__Classes_b__Head___35BCFE0A">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___398D8EEE" Association="Self.FK__Classes_b__Left___398D8EEE">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___3A81B327" Association="Self.FK__Classes_b__Left___3A81B327">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___3B75D760" Association="Self.FK__Classes_b__Left___3B75D760">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Leg_I__38996AB5" Association="Self.FK__Classes_b__Leg_I__38996AB5">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3C69FB99" Association="Self.FK__Classes_b__Right__3C69FB99">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3D5E1FD2" Association="Self.FK__Classes_b__Right__3D5E1FD2">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3E52440B" Association="Self.FK__Classes_b__Right__3E52440B">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring1__3F466844" Association="Self.FK__Classes_b__Ring1__3F466844">
+            <End Role="Ring" EntitySet="Ring" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring2__403A8C7D" Association="Self.FK__Classes_b__Ring2__403A8C7D">
+            <End Role="Ring" EntitySet="Ring" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring3__412EB0B6" Association="Self.FK__Classes_b__Ring3__412EB0B6">
+            <End Role="Ring" EntitySet="Ring" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring4__4222D4EF" Association="Self.FK__Classes_b__Ring4__4222D4EF">
+            <End Role="Ring" EntitySet="Ring" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__User___33D4B598" Association="Self.FK__Classes_b__User___33D4B598">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Comment__User_ID__44FF419A" Association="Self.FK__Comment__User_ID__44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Equipment__ET_ID__267ABA7A" Association="Self.FK__Equipment__ET_ID__267ABA7A">
+            <End Role="Equipment_Type" EntitySet="Equipment_Type" />
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Likes__Comment_I__47DBAE45" Association="Self.FK__Likes__Comment_I__47DBAE45">
+            <End Role="Comment" EntitySet="Comment" />
+            <End Role="Likes" EntitySet="Likes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User_Feed__Comme__4AB81AF0" Association="Self.FK__User_Feed__Comme__4AB81AF0">
+            <End Role="Comment" EntitySet="Comment" />
+            <End Role="User_Feed" EntitySet="User_Feed" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User_Feed__User___4BAC3F29" Association="Self.FK__User_Feed__User___4BAC3F29">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="User_Feed" EntitySet="User_Feed" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EDEN_RINGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Armor_info">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="A_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Inmunity" Type="Int16" />
+          <Property Name="Robustness" Type="Int16" />
+          <Property Name="Focus" Type="Int16" />
+          <Property Name="Vitality" Type="Int16" />
+          <Property Name="Poise" Type="Int16" />
+          <Property Name="Phy_guard" Type="Int16" />
+          <Property Name="Phy_slash" Type="Int16" />
+          <Property Name="Phy_strike" Type="Int16" />
+          <Property Name="Phy_thurst" Type="Int16" />
+          <Property Name="Mag_guard" Type="Int16" />
+          <Property Name="Fie_guard" Type="Int16" />
+          <Property Name="Holy_guard" Type="Int16" />
+          <Property Name="Weigth" Type="Double" Nullable="false" />
+          <Property Name="ET_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Armor_inf__ET_ID__2A4B4B5E" FromRole="Armor_info" ToRole="Equipment_Type" />
+          <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Chest__36B12243" FromRole="Armor_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build1" Relationship="Self.FK__Classes_b__Hand___37A5467C" FromRole="Armor_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build2" Relationship="Self.FK__Classes_b__Head___35BCFE0A" FromRole="Armor_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build3" Relationship="Self.FK__Classes_b__Leg_I__38996AB5" FromRole="Armor_info" ToRole="Classes_build" />
+        </EntityType>
+        <EntityType Name="Class">
+          <Key>
+            <PropertyRef Name="Class_ID" />
+          </Key>
+          <Property Name="Class_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Class_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Vigor" Type="Int16" Nullable="false" />
+          <Property Name="Mind" Type="Int16" Nullable="false" />
+          <Property Name="Endurance" Type="Int16" Nullable="false" />
+          <Property Name="Strength" Type="Int16" Nullable="false" />
+          <Property Name="Dex" Type="Int16" Nullable="false" />
+          <Property Name="Intell" Type="Int16" Nullable="false" />
+          <Property Name="Fai" Type="Int16" Nullable="false" />
+          <Property Name="Levels" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Class__34C8D9D1" FromRole="Classes" ToRole="Classes_build" />
+        </EntityType>
+        <EntityType Name="Classes_build">
+          <Key>
+            <PropertyRef Name="Build_ID" />
+          </Key>
+          <Property Name="Build_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Class_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Head_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Chest_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Hand_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Leg_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Left_hand1_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Left_hand2_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Left_hand3_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Right_hand1_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Right_hand2_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Right_hand3_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ring1_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ring2_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ring3_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ring4_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Levels" Type="Int16" Nullable="false" />
+          <Property Name="Vigor" Type="Int16" Nullable="false" />
+          <Property Name="Mind" Type="Int16" Nullable="false" />
+          <Property Name="Endurance" Type="Int16" Nullable="false" />
+          <Property Name="Strength" Type="Int16" Nullable="false" />
+          <Property Name="Dex" Type="Int16" Nullable="false" />
+          <Property Name="Intell" Type="Int16" Nullable="false" />
+          <Property Name="Fai" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Armor_info" Relationship="Self.FK__Classes_b__Chest__36B12243" FromRole="Classes_build" ToRole="Armor_info" />
+          <NavigationProperty Name="Armor_info1" Relationship="Self.FK__Classes_b__Hand___37A5467C" FromRole="Classes_build" ToRole="Armor_info" />
+          <NavigationProperty Name="Armor_info2" Relationship="Self.FK__Classes_b__Head___35BCFE0A" FromRole="Classes_build" ToRole="Armor_info" />
+          <NavigationProperty Name="Armor_info3" Relationship="Self.FK__Classes_b__Leg_I__38996AB5" FromRole="Classes_build" ToRole="Armor_info" />
+          <NavigationProperty Name="Class" Relationship="Self.FK__Classes_b__Class__34C8D9D1" FromRole="Classes_build" ToRole="Classes" />
+          <NavigationProperty Name="Equipment_info" Relationship="Self.FK__Classes_b__Left___398D8EEE" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Equipment_info1" Relationship="Self.FK__Classes_b__Left___3A81B327" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Equipment_info2" Relationship="Self.FK__Classes_b__Left___3B75D760" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Equipment_info3" Relationship="Self.FK__Classes_b__Right__3C69FB99" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Equipment_info4" Relationship="Self.FK__Classes_b__Right__3D5E1FD2" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Equipment_info5" Relationship="Self.FK__Classes_b__Right__3E52440B" FromRole="Classes_build" ToRole="Equipment_info" />
+          <NavigationProperty Name="Ring" Relationship="Self.FK__Classes_b__Ring1__3F466844" FromRole="Classes_build" ToRole="Ring" />
+          <NavigationProperty Name="Ring1" Relationship="Self.FK__Classes_b__Ring2__403A8C7D" FromRole="Classes_build" ToRole="Ring" />
+          <NavigationProperty Name="Ring2" Relationship="Self.FK__Classes_b__Ring3__412EB0B6" FromRole="Classes_build" ToRole="Ring" />
+          <NavigationProperty Name="Ring3" Relationship="Self.FK__Classes_b__Ring4__4222D4EF" FromRole="Classes_build" ToRole="Ring" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Classes_b__User___33D4B598" FromRole="Classes_build" ToRole="Users" />
+          <Property Name="HienThi" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Name="Comment_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pages" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Texts" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="C_Date" Type="DateTime" Precision="0" />
+          <Property Name="Likes" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Comment__User_ID__44FF419A" FromRole="Comment" ToRole="Users" />
+          <NavigationProperty Name="Likes1" Relationship="Self.FK__Likes__Comment_I__47DBAE45" FromRole="Comment" ToRole="Likes" />
+          <NavigationProperty Name="User_Feed" Relationship="Self.FK__User_Feed__Comme__4AB81AF0" FromRole="Comment" ToRole="User_Feed" />
+        </EntityType>
+        <EntityType Name="Equipment_info">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phy_dame" Type="Int16" Nullable="false" />
+          <Property Name="Phy_guard" Type="Int16" />
+          <Property Name="Mag_dame" Type="Int16" />
+          <Property Name="Mag_guard" Type="Int16" />
+          <Property Name="Fire_dame" Type="Int16" />
+          <Property Name="Fire_guard" Type="Int16" />
+          <Property Name="Ligh_dame" Type="Int16" />
+          <Property Name="Ligh_guard" Type="Int16" />
+          <Property Name="Holy_dame" Type="Int16" />
+          <Property Name="Holy_guard" Type="Int16" />
+          <Property Name="Critboot" Type="Int16" />
+          <Property Name="Guardboot" Type="Int16" />
+          <Property Name="Weigth" Type="Double" />
+          <Property Name="Scl_Str" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Scl_Dex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Scl_Int" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Scl_Fai" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="R_Scl_Str" Type="Int16" />
+          <Property Name="R_Scl_Dex" Type="Int16" />
+          <Property Name="R_Scl_Int" Type="Int16" />
+          <Property Name="R_Scl_Fai" Type="Int16" />
+          <Property Name="SKill_Cost" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ET_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Left___398D8EEE" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build1" Relationship="Self.FK__Classes_b__Left___3A81B327" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build2" Relationship="Self.FK__Classes_b__Left___3B75D760" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build3" Relationship="Self.FK__Classes_b__Right__3C69FB99" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build4" Relationship="Self.FK__Classes_b__Right__3D5E1FD2" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build5" Relationship="Self.FK__Classes_b__Right__3E52440B" FromRole="Equipment_info" ToRole="Classes_build" />
+          <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_info" ToRole="Equipment_Type" />
+        </EntityType>
+        <EntityType Name="Equipment_Type">
+          <Key>
+            <PropertyRef Name="ET_ID" />
+          </Key>
+          <Property Name="ET_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type_Names" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Armor_info" Relationship="Self.FK__Armor_inf__ET_ID__2A4B4B5E" FromRole="Equipment_Type" ToRole="Armor_info" />
+          <NavigationProperty Name="Equipment_info" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_Type" ToRole="Equipment_info" />
+        </EntityType>
+        <EntityType Name="Like">
+          <Key>
+            <PropertyRef Name="Like_ID" />
+          </Key>
+          <Property Name="Like_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Comment_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comment" Relationship="Self.FK__Likes__Comment_I__47DBAE45" FromRole="Likes" ToRole="Comment" />
+        </EntityType>
+        <EntityType Name="Ring">
+          <Key>
+            <PropertyRef Name="Ring_ID" />
+          </Key>
+          <Property Name="Ring_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ring_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Weigth" Type="Double" Nullable="false" />
+          <Property Name="Effect" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Ring1__3F466844" FromRole="Ring" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build1" Relationship="Self.FK__Classes_b__Ring2__403A8C7D" FromRole="Ring" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build2" Relationship="Self.FK__Classes_b__Ring3__412EB0B6" FromRole="Ring" ToRole="Classes_build" />
+          <NavigationProperty Name="Classes_build3" Relationship="Self.FK__Classes_b__Ring4__4222D4EF" FromRole="Ring" ToRole="Classes_build" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User_Feed">
+          <Key>
+            <PropertyRef Name="Feed_ID" />
+          </Key>
+          <Property Name="Feed_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Comment_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Feed_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Comment" Relationship="Self.FK__User_Feed__Comme__4AB81AF0" FromRole="User_Feed" ToRole="Comment" />
+          <NavigationProperty Name="User" Relationship="Self.FK__User_Feed__User___4BAC3F29" FromRole="User_Feed" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DoB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Token" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Admin" Type="Boolean" />
+          <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__User___33D4B598" FromRole="Users" ToRole="Classes_build" />
+          <NavigationProperty Name="Comments" Relationship="Self.FK__Comment__User_ID__44FF419A" FromRole="Users" ToRole="Comment" />
+          <NavigationProperty Name="User_Feed" Relationship="Self.FK__User_Feed__User___4BAC3F29" FromRole="Users" ToRole="User_Feed" />
+        </EntityType>
+        <Association Name="FK__Armor_inf__ET_ID__2A4B4B5E">
+          <End Role="Equipment_Type" Type="Self.Equipment_Type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_Type">
+              <PropertyRef Name="ET_ID" />
+            </Principal>
+            <Dependent Role="Armor_info">
+              <PropertyRef Name="ET_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Chest__36B12243">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Chest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Hand___37A5467C">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Hand_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Head___35BCFE0A">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Head_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Leg_I__38996AB5">
+          <End Role="Armor_info" Type="Self.Armor_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Armor_info">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Leg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Class__34C8D9D1">
+          <End Role="Classes" Type="Self.Class" Multiplicity="1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="Class_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Class_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___398D8EEE">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___3A81B327">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Left___3B75D760">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Left_hand3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3C69FB99">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3D5E1FD2">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Right__3E52440B">
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_info">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Right_hand3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring1__3F466844">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring1_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring2__403A8C7D">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring2_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring3__412EB0B6">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring3_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__Ring4__4222D4EF">
+          <End Role="Ring" Type="Self.Ring" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ring">
+              <PropertyRef Name="Ring_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="Ring4_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes_b__User___33D4B598">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Classes_build" Type="Self.Classes_build" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Classes_build">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Comment__User_ID__44FF419A">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Likes__Comment_I__47DBAE45">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="0..1" />
+          <End Role="Likes" Type="Self.Like" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Comment_ID" />
+            </Principal>
+            <Dependent Role="Likes">
+              <PropertyRef Name="Comment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User_Feed__Comme__4AB81AF0">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="1" />
+          <End Role="User_Feed" Type="Self.User_Feed" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Comment_ID" />
+            </Principal>
+            <Dependent Role="User_Feed">
+              <PropertyRef Name="Comment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Equipment__ET_ID__267ABA7A">
+          <End Role="Equipment_Type" Type="Self.Equipment_Type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Equipment_info" Type="Self.Equipment_info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment_Type">
+              <PropertyRef Name="ET_ID" />
+            </Principal>
+            <Dependent Role="Equipment_info">
+              <PropertyRef Name="ET_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User_Feed__User___4BAC3F29">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="User_Feed" Type="Self.User_Feed" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="User_Feed">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EDEN_RINGEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Armor_info" EntityType="Self.Armor_info" />
+          <EntitySet Name="Classes" EntityType="Self.Class" />
+          <EntitySet Name="Classes_build" EntityType="Self.Classes_build" />
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Equipment_info" EntityType="Self.Equipment_info" />
+          <EntitySet Name="Equipment_Type" EntityType="Self.Equipment_Type" />
+          <EntitySet Name="Likes" EntityType="Self.Like" />
+          <EntitySet Name="Rings" EntityType="Self.Ring" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="User_Feed" EntityType="Self.User_Feed" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__Armor_inf__ET_ID__2A4B4B5E" Association="Self.FK__Armor_inf__ET_ID__2A4B4B5E">
+            <End Role="Equipment_Type" EntitySet="Equipment_Type" />
+            <End Role="Armor_info" EntitySet="Armor_info" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Chest__36B12243" Association="Self.FK__Classes_b__Chest__36B12243">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Hand___37A5467C" Association="Self.FK__Classes_b__Hand___37A5467C">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Head___35BCFE0A" Association="Self.FK__Classes_b__Head___35BCFE0A">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Leg_I__38996AB5" Association="Self.FK__Classes_b__Leg_I__38996AB5">
+            <End Role="Armor_info" EntitySet="Armor_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Class__34C8D9D1" Association="Self.FK__Classes_b__Class__34C8D9D1">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___398D8EEE" Association="Self.FK__Classes_b__Left___398D8EEE">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___3A81B327" Association="Self.FK__Classes_b__Left___3A81B327">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Left___3B75D760" Association="Self.FK__Classes_b__Left___3B75D760">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3C69FB99" Association="Self.FK__Classes_b__Right__3C69FB99">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3D5E1FD2" Association="Self.FK__Classes_b__Right__3D5E1FD2">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Right__3E52440B" Association="Self.FK__Classes_b__Right__3E52440B">
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring1__3F466844" Association="Self.FK__Classes_b__Ring1__3F466844">
+            <End Role="Ring" EntitySet="Rings" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring2__403A8C7D" Association="Self.FK__Classes_b__Ring2__403A8C7D">
+            <End Role="Ring" EntitySet="Rings" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring3__412EB0B6" Association="Self.FK__Classes_b__Ring3__412EB0B6">
+            <End Role="Ring" EntitySet="Rings" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__Ring4__4222D4EF" Association="Self.FK__Classes_b__Ring4__4222D4EF">
+            <End Role="Ring" EntitySet="Rings" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes_b__User___33D4B598" Association="Self.FK__Classes_b__User___33D4B598">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Classes_build" EntitySet="Classes_build" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Comment__User_ID__44FF419A" Association="Self.FK__Comment__User_ID__44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Likes__Comment_I__47DBAE45" Association="Self.FK__Likes__Comment_I__47DBAE45">
+            <End Role="Comment" EntitySet="Comments" />
+            <End Role="Likes" EntitySet="Likes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User_Feed__Comme__4AB81AF0" Association="Self.FK__User_Feed__Comme__4AB81AF0">
+            <End Role="Comment" EntitySet="Comments" />
+            <End Role="User_Feed" EntitySet="User_Feed" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Equipment__ET_ID__267ABA7A" Association="Self.FK__Equipment__ET_ID__267ABA7A">
+            <End Role="Equipment_Type" EntitySet="Equipment_Type" />
+            <End Role="Equipment_info" EntitySet="Equipment_info" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User_Feed__User___4BAC3F29" Association="Self.FK__User_Feed__User___4BAC3F29">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="User_Feed" EntitySet="User_Feed" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EDEN_RINGModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EDEN_RINGModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EDEN_RINGModelStoreContainer" CdmEntityContainer="EDEN_RINGEntities">
+          <EntitySetMapping Name="Armor_info">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Armor_info">
+              <MappingFragment StoreEntitySet="Armor_info">
+                <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+                <ScalarProperty Name="A_Name" ColumnName="A_Name" />
+                <ScalarProperty Name="Inmunity" ColumnName="Inmunity" />
+                <ScalarProperty Name="Robustness" ColumnName="Robustness" />
+                <ScalarProperty Name="Focus" ColumnName="Focus" />
+                <ScalarProperty Name="Vitality" ColumnName="Vitality" />
+                <ScalarProperty Name="Poise" ColumnName="Poise" />
+                <ScalarProperty Name="Phy_guard" ColumnName="Phy_guard" />
+                <ScalarProperty Name="Phy_slash" ColumnName="Phy_slash" />
+                <ScalarProperty Name="Phy_strike" ColumnName="Phy_strike" />
+                <ScalarProperty Name="Phy_thurst" ColumnName="Phy_thurst" />
+                <ScalarProperty Name="Mag_guard" ColumnName="Mag_guard" />
+                <ScalarProperty Name="Fie_guard" ColumnName="Fie_guard" />
+                <ScalarProperty Name="Holy_guard" ColumnName="Holy_guard" />
+                <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+                <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classes">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Class">
+              <MappingFragment StoreEntitySet="Classes">
+                <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
+                <ScalarProperty Name="Class_Name" ColumnName="Class_Name" />
+                <ScalarProperty Name="Vigor" ColumnName="Vigor" />
+                <ScalarProperty Name="Mind" ColumnName="Mind" />
+                <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+                <ScalarProperty Name="Strength" ColumnName="Strength" />
+                <ScalarProperty Name="Dex" ColumnName="Dex" />
+                <ScalarProperty Name="Intell" ColumnName="Intell" />
+                <ScalarProperty Name="Fai" ColumnName="Fai" />
+                <ScalarProperty Name="Levels" ColumnName="Levels" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classes_build">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Classes_build">
+              <MappingFragment StoreEntitySet="Classes_build">
+                <ScalarProperty Name="HienThi" ColumnName="HienThi" />
+                <ScalarProperty Name="Build_ID" ColumnName="Build_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
+                <ScalarProperty Name="Head_ID" ColumnName="Head_ID" />
+                <ScalarProperty Name="Chest_ID" ColumnName="Chest_ID" />
+                <ScalarProperty Name="Hand_ID" ColumnName="Hand_ID" />
+                <ScalarProperty Name="Leg_ID" ColumnName="Leg_ID" />
+                <ScalarProperty Name="Left_hand1_ID" ColumnName="Left_hand1_ID" />
+                <ScalarProperty Name="Left_hand2_ID" ColumnName="Left_hand2_ID" />
+                <ScalarProperty Name="Left_hand3_ID" ColumnName="Left_hand3_ID" />
+                <ScalarProperty Name="Right_hand1_ID" ColumnName="Right_hand1_ID" />
+                <ScalarProperty Name="Right_hand2_ID" ColumnName="Right_hand2_ID" />
+                <ScalarProperty Name="Right_hand3_ID" ColumnName="Right_hand3_ID" />
+                <ScalarProperty Name="Ring1_ID" ColumnName="Ring1_ID" />
+                <ScalarProperty Name="Ring2_ID" ColumnName="Ring2_ID" />
+                <ScalarProperty Name="Ring3_ID" ColumnName="Ring3_ID" />
+                <ScalarProperty Name="Ring4_ID" ColumnName="Ring4_ID" />
+                <ScalarProperty Name="Levels" ColumnName="Levels" />
+                <ScalarProperty Name="Vigor" ColumnName="Vigor" />
+                <ScalarProperty Name="Mind" ColumnName="Mind" />
+                <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+                <ScalarProperty Name="Strength" ColumnName="Strength" />
+                <ScalarProperty Name="Dex" ColumnName="Dex" />
+                <ScalarProperty Name="Intell" ColumnName="Intell" />
+                <ScalarProperty Name="Fai" ColumnName="Fai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+                <ScalarProperty Name="Pages" ColumnName="Pages" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Texts" ColumnName="Texts" />
+                <ScalarProperty Name="C_Date" ColumnName="C_Date" />
+                <ScalarProperty Name="Likes" ColumnName="Likes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipment_info">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_info">
+              <MappingFragment StoreEntitySet="Equipment_info">
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+                <ScalarProperty Name="E_Name" ColumnName="E_Name" />
+                <ScalarProperty Name="Phy_dame" ColumnName="Phy_dame" />
+                <ScalarProperty Name="Phy_guard" ColumnName="Phy_guard" />
+                <ScalarProperty Name="Mag_dame" ColumnName="Mag_dame" />
+                <ScalarProperty Name="Mag_guard" ColumnName="Mag_guard" />
+                <ScalarProperty Name="Fire_dame" ColumnName="Fire_dame" />
+                <ScalarProperty Name="Fire_guard" ColumnName="Fire_guard" />
+                <ScalarProperty Name="Ligh_dame" ColumnName="Ligh_dame" />
+                <ScalarProperty Name="Ligh_guard" ColumnName="Ligh_guard" />
+                <ScalarProperty Name="Holy_dame" ColumnName="Holy_dame" />
+                <ScalarProperty Name="Holy_guard" ColumnName="Holy_guard" />
+                <ScalarProperty Name="Critboot" ColumnName="Critboot" />
+                <ScalarProperty Name="Guardboot" ColumnName="Guardboot" />
+                <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+                <ScalarProperty Name="Scl_Str" ColumnName="Scl_Str" />
+                <ScalarProperty Name="Scl_Dex" ColumnName="Scl_Dex" />
+                <ScalarProperty Name="Scl_Int" ColumnName="Scl_Int" />
+                <ScalarProperty Name="Scl_Fai" ColumnName="Scl_Fai" />
+                <ScalarProperty Name="R_Scl_Str" ColumnName="R_Scl_Str" />
+                <ScalarProperty Name="R_Scl_Dex" ColumnName="R_Scl_Dex" />
+                <ScalarProperty Name="R_Scl_Int" ColumnName="R_Scl_Int" />
+                <ScalarProperty Name="R_Scl_Fai" ColumnName="R_Scl_Fai" />
+                <ScalarProperty Name="SKill_Cost" ColumnName="SKill_Cost" />
+                <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipment_Type">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_Type">
+              <MappingFragment StoreEntitySet="Equipment_Type">
+                <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+                <ScalarProperty Name="Type_Names" ColumnName="Type_Names" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Likes">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Like">
+              <MappingFragment StoreEntitySet="Likes">
+                <ScalarProperty Name="Like_ID" ColumnName="Like_ID" />
+                <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rings">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Ring">
+              <MappingFragment StoreEntitySet="Ring">
+                <ScalarProperty Name="Ring_ID" ColumnName="Ring_ID" />
+                <ScalarProperty Name="Ring_Name" ColumnName="Ring_Name" />
+                <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+                <ScalarProperty Name="Effect" ColumnName="Effect" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Feed">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.User_Feed">
+              <MappingFragment StoreEntitySet="User_Feed">
+                <ScalarProperty Name="Feed_ID" ColumnName="Feed_ID" />
+                <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Feed_Date" ColumnName="Feed_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="DoB" ColumnName="DoB" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EDEN_RINGModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EDEN_RINGModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EDEN_RINGModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EDEN_RINGModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EDEN_RINGModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EDEN_RINGModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EDEN_RINGModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EDEN_RINGModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EDEN_RINGModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1678e66835434d389376ce8ad31bf00c" Name="Diagram1" ZoomLevel="57">
+        <EntityTypeShape EntityType="EDEN_RINGModel.Armor_info" Width="1.5" PointX="12.375" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Class" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Classes_build" Width="1.5" PointX="7.375" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Comment" Width="1.5" PointX="3.625" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Equipment_info" Width="1.5" PointX="3.375" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Equipment_Type" Width="1.5" PointX="7.375" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Like" Width="1.5" PointX="6.125" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.Ring" Width="1.5" PointX="3.375" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.sysdiagram" Width="1.5" PointX="14.375" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.User_Feed" Width="1.5" PointX="5.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EDEN_RINGModel.User" Width="1.5" PointX="1" PointY="14.375" IsExpanded="true" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Armor_inf__ET_ID__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Chest__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Hand___37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Head___35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Leg_I__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Class__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Left___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Left___3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Left___3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Right__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Right__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Right__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Ring1__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Ring2__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Ring3__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__Ring4__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Classes_b__User___33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Comment__User_ID__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Likes__Comment_I__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__User_Feed__Comme__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__Equipment__ET_ID__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="EDEN_RINGModel.FK__User_Feed__User___4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

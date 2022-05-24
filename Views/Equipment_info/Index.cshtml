@@ -1,0 +1,141 @@
+﻿@model IEnumerable<projectE.Models.Equipment_info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = ViewBag.Check;
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Phy
+        </th>
+            Mag
+        <th>
+            Fire
+        </th>
+        <th>
+           Ligh
+        </th>
+        <th>
+            Holy
+        </th>
+        <th>
+            Crit<br />
+            Boost
+        </th>
+        <th>
+            Str
+        </th>
+        <th>
+            Dex
+        </th>
+        <th>
+            Int
+        </th>
+        <th>
+            Fai
+        </th>
+        <th>
+            Arc
+        </th>
+        <th>
+            Wgt
+        </th>
+        <th>
+            Skill
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+    string ten = item.E_Name;
+    string temp = ten.ToLower().Replace(" ", "_").Replace("'","") + "_";
+    string tenitem = temp;
+    string duoi = "_weapon_elden_ring_wiki_guide_200px.png";
+    string than = ViewBag.typeName;
+    string result = dau + tenitem + than + duoi;
+<tr>
+    <td>
+        <a style="text-decoration-line:none;" href="@Url.Action("Details", "Equipment_info", new { id = item.E_ID })">
+        <img height="100" width="100" src="@result" alt="Alternate Text" />
+        </a>
+        
+        @Html.DisplayFor(modelItem => item.E_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phy_dame)
+        <br />
+        @Html.DisplayFor(modelItem => item.Phy_guard)
+    </td>
+
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Mag_dame)<br />
+        @Html.DisplayFor(modelItem => item.Mag_guard)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Fire_dame)<br />
+        @Html.DisplayFor(modelItem => item.Fire_guard)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Ligh_dame)<br />
+        @Html.DisplayFor(modelItem => item.Ligh_guard)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Holy_dame)<br />
+        @Html.DisplayFor(modelItem => item.Holy_guard)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Critboot)<br />
+        @Html.DisplayFor(modelItem => item.Guardboot)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Scl_Str)<br />
+        @Html.DisplayFor(modelItem => item.R_Scl_Str)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Scl_Dex)<br />
+        @Html.DisplayFor(modelItem => item.R_Scl_Dex)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Scl_Int)<br />
+        @Html.DisplayFor(modelItem => item.R_Scl_Int)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Scl_Fai)<br />
+        @Html.DisplayFor(modelItem => item.R_Scl_Fai)
+    </td>
+    
+    <td>
+        @Html.DisplayFor(modelItem => item.Weigth)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SKill_Cost)
+    </td>
+    <td>
+        @if(!ViewBag.isUser) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
+
+        @if(!ViewBag.isUser) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
+          
+       
+    </td>
+</tr>
+}
+
+</table>

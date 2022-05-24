@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EDEN_RINGModelStoreContainer" CdmEntityContainer="EDEN_RINGEntities">
+    <EntitySetMapping Name="Armor_info">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Armor_info">
+        <MappingFragment StoreEntitySet="Armor_info">
+          <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+          <ScalarProperty Name="A_Name" ColumnName="A_Name" />
+          <ScalarProperty Name="Inmunity" ColumnName="Inmunity" />
+          <ScalarProperty Name="Robustness" ColumnName="Robustness" />
+          <ScalarProperty Name="Focus" ColumnName="Focus" />
+          <ScalarProperty Name="Vitality" ColumnName="Vitality" />
+          <ScalarProperty Name="Poise" ColumnName="Poise" />
+          <ScalarProperty Name="Phy_guard" ColumnName="Phy_guard" />
+          <ScalarProperty Name="Phy_slash" ColumnName="Phy_slash" />
+          <ScalarProperty Name="Phy_strike" ColumnName="Phy_strike" />
+          <ScalarProperty Name="Phy_thurst" ColumnName="Phy_thurst" />
+          <ScalarProperty Name="Mag_guard" ColumnName="Mag_guard" />
+          <ScalarProperty Name="Fie_guard" ColumnName="Fie_guard" />
+          <ScalarProperty Name="Holy_guard" ColumnName="Holy_guard" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
+          <ScalarProperty Name="Class_Name" ColumnName="Class_Name" />
+          <ScalarProperty Name="Vigor" ColumnName="Vigor" />
+          <ScalarProperty Name="Mind" ColumnName="Mind" />
+          <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Dex" ColumnName="Dex" />
+          <ScalarProperty Name="Intell" ColumnName="Intell" />
+          <ScalarProperty Name="Fai" ColumnName="Fai" />
+          <ScalarProperty Name="Levels" ColumnName="Levels" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes_build">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Classes_build">
+        <MappingFragment StoreEntitySet="Classes_build">
+          <ScalarProperty Name="HienThi" ColumnName="HienThi" />
+          <ScalarProperty Name="Build_ID" ColumnName="Build_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
+          <ScalarProperty Name="Head_ID" ColumnName="Head_ID" />
+          <ScalarProperty Name="Chest_ID" ColumnName="Chest_ID" />
+          <ScalarProperty Name="Hand_ID" ColumnName="Hand_ID" />
+          <ScalarProperty Name="Leg_ID" ColumnName="Leg_ID" />
+          <ScalarProperty Name="Left_hand1_ID" ColumnName="Left_hand1_ID" />
+          <ScalarProperty Name="Left_hand2_ID" ColumnName="Left_hand2_ID" />
+          <ScalarProperty Name="Left_hand3_ID" ColumnName="Left_hand3_ID" />
+          <ScalarProperty Name="Right_hand1_ID" ColumnName="Right_hand1_ID" />
+          <ScalarProperty Name="Right_hand2_ID" ColumnName="Right_hand2_ID" />
+          <ScalarProperty Name="Right_hand3_ID" ColumnName="Right_hand3_ID" />
+          <ScalarProperty Name="Ring1_ID" ColumnName="Ring1_ID" />
+          <ScalarProperty Name="Ring2_ID" ColumnName="Ring2_ID" />
+          <ScalarProperty Name="Ring3_ID" ColumnName="Ring3_ID" />
+          <ScalarProperty Name="Ring4_ID" ColumnName="Ring4_ID" />
+          <ScalarProperty Name="Levels" ColumnName="Levels" />
+          <ScalarProperty Name="Vigor" ColumnName="Vigor" />
+          <ScalarProperty Name="Mind" ColumnName="Mind" />
+          <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Dex" ColumnName="Dex" />
+          <ScalarProperty Name="Intell" ColumnName="Intell" />
+          <ScalarProperty Name="Fai" ColumnName="Fai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+          <ScalarProperty Name="Pages" ColumnName="Pages" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Texts" ColumnName="Texts" />
+          <ScalarProperty Name="C_Date" ColumnName="C_Date" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment_info">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_info">
+        <MappingFragment StoreEntitySet="Equipment_info">
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+          <ScalarProperty Name="E_Name" ColumnName="E_Name" />
+          <ScalarProperty Name="Phy_dame" ColumnName="Phy_dame" />
+          <ScalarProperty Name="Phy_guard" ColumnName="Phy_guard" />
+          <ScalarProperty Name="Mag_dame" ColumnName="Mag_dame" />
+          <ScalarProperty Name="Mag_guard" ColumnName="Mag_guard" />
+          <ScalarProperty Name="Fire_dame" ColumnName="Fire_dame" />
+          <ScalarProperty Name="Fire_guard" ColumnName="Fire_guard" />
+          <ScalarProperty Name="Ligh_dame" ColumnName="Ligh_dame" />
+          <ScalarProperty Name="Ligh_guard" ColumnName="Ligh_guard" />
+          <ScalarProperty Name="Holy_dame" ColumnName="Holy_dame" />
+          <ScalarProperty Name="Holy_guard" ColumnName="Holy_guard" />
+          <ScalarProperty Name="Critboot" ColumnName="Critboot" />
+          <ScalarProperty Name="Guardboot" ColumnName="Guardboot" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="Scl_Str" ColumnName="Scl_Str" />
+          <ScalarProperty Name="Scl_Dex" ColumnName="Scl_Dex" />
+          <ScalarProperty Name="Scl_Int" ColumnName="Scl_Int" />
+          <ScalarProperty Name="Scl_Fai" ColumnName="Scl_Fai" />
+          <ScalarProperty Name="R_Scl_Str" ColumnName="R_Scl_Str" />
+          <ScalarProperty Name="R_Scl_Dex" ColumnName="R_Scl_Dex" />
+          <ScalarProperty Name="R_Scl_Int" ColumnName="R_Scl_Int" />
+          <ScalarProperty Name="R_Scl_Fai" ColumnName="R_Scl_Fai" />
+          <ScalarProperty Name="SKill_Cost" ColumnName="SKill_Cost" />
+          <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment_Type">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_Type">
+        <MappingFragment StoreEntitySet="Equipment_Type">
+          <ScalarProperty Name="ET_ID" ColumnName="ET_ID" />
+          <ScalarProperty Name="Type_Names" ColumnName="Type_Names" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Likes">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Like">
+        <MappingFragment StoreEntitySet="Likes">
+          <ScalarProperty Name="Like_ID" ColumnName="Like_ID" />
+          <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rings">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Ring">
+        <MappingFragment StoreEntitySet="Ring">
+          <ScalarProperty Name="Ring_ID" ColumnName="Ring_ID" />
+          <ScalarProperty Name="Ring_Name" ColumnName="Ring_Name" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Feed">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.User_Feed">
+        <MappingFragment StoreEntitySet="User_Feed">
+          <ScalarProperty Name="Feed_ID" ColumnName="Feed_ID" />
+          <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Feed_Date" ColumnName="Feed_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EDEN_RINGModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EDEN_RINGModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EDEN_RINGModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EDEN_RINGModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EDEN_RINGModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EDEN_RINGModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EDEN_RINGModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EDEN_RINGModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EDEN_RINGModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
