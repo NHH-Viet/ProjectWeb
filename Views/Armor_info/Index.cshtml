@@ -1,0 +1,131 @@
+﻿@model IEnumerable<projectE.Models.Armor_info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.A_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inmunity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Robustness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Focus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vitality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Poise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phy_guard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phy_slash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phy_strike)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phy_thurst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mag_guard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fie_guard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Light_guard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Holy_guard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weigth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipment_Type.Type_Names)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+    string ten = item.A_Name;
+    string temp = ten.ToLower().Replace(" ", "_").Replace("'", "") + "_";
+    string tenitem = temp;
+    string duoi = "_elden_ring_wiki_guide_200px.png";
+    string than = ViewBag.typeName;
+    string result = dau + tenitem + duoi;
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.A_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Inmunity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Robustness)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Focus)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vitality)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Poise)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phy_guard)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phy_slash)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phy_strike)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phy_thurst)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mag_guard)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fie_guard)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Light_guard)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Holy_guard)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Weigth)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Equipment_Type.Type_Names)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.A_ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.A_ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.A_ID })
+    </td>
+</tr>
+}
+
+</table>

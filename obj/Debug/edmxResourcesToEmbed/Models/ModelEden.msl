@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Armor_info">
       <EntityTypeMapping TypeName="EDEN_RINGModel.Armor_info">
         <MappingFragment StoreEntitySet="Armor_info">
+          <ScalarProperty Name="Light_guard" ColumnName="Light_guard" />
           <ScalarProperty Name="A_ID" ColumnName="A_ID" />
           <ScalarProperty Name="A_Name" ColumnName="A_Name" />
           <ScalarProperty Name="Inmunity" ColumnName="Inmunity" />

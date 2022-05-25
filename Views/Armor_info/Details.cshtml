@@ -1,0 +1,66 @@
+﻿@model projectE.Models.Armor_info
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+<table class="wiki_table">
+    <tbody>
+        <tr>
+            <th colspan="2"> <h2>@Html.DisplayFor(model => model.A_Name)</h2> </th>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2"><img style="width: 200px; height: 200px;" title="Albinauric Mask" src="/file/Elden-Ring/albinauric_mask_elden_ring_wiki_guide_200px.png" alt="albinauric mask elden ring wiki guide 200px" width="200" height="200"></td>
+        </tr>
+        <tr>
+            <td style="width: 140px;">
+                <img style="float: left;" title="damage_negation_icon_elden_ring_wiki_guide__18px" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/damage_negation_icon_elden_ring_wiki_guide__18px.png" alt="damage negation icon elden ring wiki guide 18px" width="18" height="18">Dmg Negation
+                <div class="lineleft">
+                    <a class="wiki_link" title="Elden Ring Physical Defense" href="/Physical+Defense">Phy</a>&nbsp;@Html.DisplayFor(model => model.Phy_guard)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring VS Strike Defense" href="/VS+Strike+Defense">VS Strike</a>&nbsp;@Html.DisplayFor(model => model.Phy_strike)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring VS Slash Defense" href="/VS+Slash+Defense">VS Slash</a>&nbsp; @Html.DisplayFor(model => model.Phy_slash)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring VS Pierce Defense" href="/VS+Pierce+Defense">VS Pierce</a>&nbsp;@Html.DisplayFor(model => model.Phy_thurst)
+                    <br>
+                    <span style="color: #3fbddd;"><a class="wiki_link" style="color: #3fbddd;" title="Elden Ring Magic Defense" href="/Magic+Defense">Magic</a></span>&nbsp; @Html.DisplayFor(model => model.Mag_guard)
+                    <br>
+                    <span style="color: #ff9900;"><a class="wiki_link" style="color: #cc9d57;" title="Elden Ring Fire Defense" href="/Fire+Defense">Fire</a></span>&nbsp;@Html.DisplayFor(model => model.Fie_guard)
+                    <br>
+                    <span style="color: #ffff00;"><a class="wiki_link" style="color: #d5d559;" title="Elden Ring Lightning Defense" href="/Lightning+Defense">Ligt</a></span>&nbsp; @Html.DisplayFor(model => model.Light_guard)
+                    <br>
+                    <span style="color: #ffcc99;"><a class="wiki_link" style="color: #ffcc99;" title="Elden Ring Holy Defense" href="/Holy+Defense">Holy</a></span>&nbsp; @Html.DisplayFor(model => model.Holy_guard)
+                </div>
+            </td>
+            <td style="width: 140px;">
+                <img style="float: left;" title="resisntace_icon_elden_ring_wiki_guide__18px" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/damage_negation_icon_elden_ring_wiki_guide__18px.png" alt="resisntace icon elden ring wiki guide 18px" width="18" height="18">Resistance
+                <div class="lineleft">
+                    <a class="wiki_link" title="Elden Ring Immunity" href="/Immunity" target="">Immunity</a>&nbsp;@Html.DisplayFor(model => model.Inmunity)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring Robustness" href="/Robustness" target="">Robustness</a>&nbsp;@Html.DisplayFor(model => model.Robustness)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring Focus" href="/Focus" target="">Focus</a>&nbsp;@Html.DisplayFor(model => model.Focus)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring Vitality" href="/Vitality" target="">Vitality</a>&nbsp; @Html.DisplayFor(model => model.Vitality)
+                    <br>
+                    <a class="wiki_link" title="Elden Ring Poise" href="/Poise" target="">Poise</a>&nbsp;@Html.DisplayFor(model => model.Poise)
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><a class="wiki_link" title="Elden Ring Helms" href="/Helms">@Html.DisplayFor(model => model.ET_ID)</a></td>
+            <td><a class="wiki_link" title="Elden Ring Weight" href="/Weight">Wgt.</a>&nbsp;<span style="color: #ffffff;">@Html.DisplayFor(model => model.Weigth)</span></td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.A_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

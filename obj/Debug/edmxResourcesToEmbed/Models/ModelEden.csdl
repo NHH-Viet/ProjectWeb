@@ -11,13 +11,13 @@
     <Property Name="Focus" Type="Int16" />
     <Property Name="Vitality" Type="Int16" />
     <Property Name="Poise" Type="Int16" />
-    <Property Name="Phy_guard" Type="Int16" />
-    <Property Name="Phy_slash" Type="Int16" />
-    <Property Name="Phy_strike" Type="Int16" />
-    <Property Name="Phy_thurst" Type="Int16" />
-    <Property Name="Mag_guard" Type="Int16" />
-    <Property Name="Fie_guard" Type="Int16" />
-    <Property Name="Holy_guard" Type="Int16" />
+    <Property Name="Phy_guard" Type="Double" />
+    <Property Name="Phy_slash" Type="Double" />
+    <Property Name="Phy_strike" Type="Double" />
+    <Property Name="Phy_thurst" Type="Double" />
+    <Property Name="Mag_guard" Type="Double" />
+    <Property Name="Fie_guard" Type="Double" />
+    <Property Name="Holy_guard" Type="Double" />
     <Property Name="Weigth" Type="Double" Nullable="false" />
     <Property Name="ET_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Armor_inf__ET_ID__2A4B4B5E" FromRole="Armor_info" ToRole="Equipment_Type" />
@@ -25,6 +25,7 @@
     <NavigationProperty Name="Classes_build1" Relationship="Self.FK__Classes_b__Hand___37A5467C" FromRole="Armor_info" ToRole="Classes_build" />
     <NavigationProperty Name="Classes_build2" Relationship="Self.FK__Classes_b__Head___35BCFE0A" FromRole="Armor_info" ToRole="Classes_build" />
     <NavigationProperty Name="Classes_build3" Relationship="Self.FK__Classes_b__Leg_I__38996AB5" FromRole="Armor_info" ToRole="Classes_build" />
+    <Property Name="Light_guard" Type="Double" />
   </EntityType>
   <EntityType Name="Class">
     <Key>

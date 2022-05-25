@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="@Url.Action("HomePage", "HomePage")">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,8 +22,8 @@
                             Dropdow
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>@Html.ActionLink("Weapons", "Index","Equipment_Type" ,null,new { @class = "dropdown-item" }) &nbsp;|&nbsp;</li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>@Html.ActionLink("Weapons", "Index","Equipment_Type" ,null,new { @class = "dropdown-item" })</li>
+                            <li><a class="dropdown-item" href="#">@Html.ActionLink("Armor", "Index", "Armor_info", null, new { @class = "dropdown-item" })</a></li>
                             <li>
                                 <a class="dropdown-item" href="#">
                                     Submenu &raquo;

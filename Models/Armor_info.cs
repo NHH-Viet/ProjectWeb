@@ -30,15 +30,16 @@ namespace projectE.Models
         public Nullable<short> Focus { get; set; }
         public Nullable<short> Vitality { get; set; }
         public Nullable<short> Poise { get; set; }
-        public Nullable<short> Phy_guard { get; set; }
-        public Nullable<short> Phy_slash { get; set; }
-        public Nullable<short> Phy_strike { get; set; }
-        public Nullable<short> Phy_thurst { get; set; }
-        public Nullable<short> Mag_guard { get; set; }
-        public Nullable<short> Fie_guard { get; set; }
-        public Nullable<short> Holy_guard { get; set; }
+        public Nullable<double> Phy_guard { get; set; }
+        public Nullable<double> Phy_slash { get; set; }
+        public Nullable<double> Phy_strike { get; set; }
+        public Nullable<double> Phy_thurst { get; set; }
+        public Nullable<double> Mag_guard { get; set; }
+        public Nullable<double> Fie_guard { get; set; }
+        public Nullable<double> Holy_guard { get; set; }
         public double Weigth { get; set; }
         public string ET_ID { get; set; }
+        public Nullable<double> Light_guard { get; set; }
     
         public virtual Equipment_Type Equipment_Type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

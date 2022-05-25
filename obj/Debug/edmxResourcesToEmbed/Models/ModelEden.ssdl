@@ -11,15 +11,16 @@
     <Property Name="Focus" Type="smallint" />
     <Property Name="Vitality" Type="smallint" />
     <Property Name="Poise" Type="smallint" />
-    <Property Name="Phy_guard" Type="smallint" />
-    <Property Name="Phy_slash" Type="smallint" />
-    <Property Name="Phy_strike" Type="smallint" />
-    <Property Name="Phy_thurst" Type="smallint" />
-    <Property Name="Mag_guard" Type="smallint" />
-    <Property Name="Fie_guard" Type="smallint" />
-    <Property Name="Holy_guard" Type="smallint" />
+    <Property Name="Phy_guard" Type="float" />
+    <Property Name="Phy_slash" Type="float" />
+    <Property Name="Phy_strike" Type="float" />
+    <Property Name="Phy_thurst" Type="float" />
+    <Property Name="Mag_guard" Type="float" />
+    <Property Name="Fie_guard" Type="float" />
+    <Property Name="Holy_guard" Type="float" />
     <Property Name="Weigth" Type="float" Nullable="false" />
     <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Light_guard" Type="float" />
   </EntityType>
   <EntityType Name="Classes">
     <Key>

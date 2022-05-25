@@ -65,7 +65,25 @@ CREATE TABLE Armor_info
 )
 GO
 ALTER TABLE Armor_info
-ADD CONSTRAINT Min_check CHECK (Weigth>0);
+ALTER COLUMN Phy_guard float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Phy_slash float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Phy_strike float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Phy_thurst float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Holy_guard float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Fie_guard float;
+GO
+ALTER TABLE Armor_info
+ALTER COLUMN Mag_guard float;
 GO
 CREATE TABLE Ring
 (
