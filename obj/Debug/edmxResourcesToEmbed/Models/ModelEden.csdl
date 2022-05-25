@@ -42,6 +42,7 @@
     <Property Name="Fai" Type="Int16" Nullable="false" />
     <Property Name="Levels" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Class__34C8D9D1" FromRole="Classes" ToRole="Classes_build" />
+    <Property Name="Arc" Type="Int16" />
   </EntityType>
   <EntityType Name="Classes_build">
     <Key>

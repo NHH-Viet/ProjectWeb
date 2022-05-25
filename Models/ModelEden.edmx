@@ -41,6 +41,7 @@
           <Property Name="Intell" Type="smallint" Nullable="false" />
           <Property Name="Fai" Type="smallint" Nullable="false" />
           <Property Name="Levels" Type="smallint" Nullable="false" />
+          <Property Name="Arc" Type="smallint" />
         </EntityType>
         <EntityType Name="Classes_build">
           <Key>
@@ -614,6 +615,7 @@
           <Property Name="Fai" Type="Int16" Nullable="false" />
           <Property Name="Levels" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Classes_build" Relationship="Self.FK__Classes_b__Class__34C8D9D1" FromRole="Classes" ToRole="Classes_build" />
+          <Property Name="Arc" Type="Int16" />
         </EntityType>
         <EntityType Name="Classes_build">
           <Key>
@@ -1221,6 +1223,7 @@
           <EntitySetMapping Name="Classes">
             <EntityTypeMapping TypeName="EDEN_RINGModel.Class">
               <MappingFragment StoreEntitySet="Classes">
+                <ScalarProperty Name="Arc" ColumnName="Arc" />
                 <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
                 <ScalarProperty Name="Class_Name" ColumnName="Class_Name" />
                 <ScalarProperty Name="Vigor" ColumnName="Vigor" />

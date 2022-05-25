@@ -22,8 +22,29 @@
                             Dropdow
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>@Html.ActionLink("Weapons", "Index","Equipment_Type" ,null,new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Weapons", "Index", "Equipment_Type", null, new { @class = "dropdown-item" })</li>
                             <li><a class="dropdown-item" href="#">@Html.ActionLink("Armor", "Index", "Armor_info", null, new { @class = "dropdown-item" })</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Submenu &raquo;
+                                </a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Submenu item 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Submenu item 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Character
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>@Html.ActionLink("Classes", "Index", "Classes", null, new { @class = "dropdown-item" })</li>
                             <li>
                                 <a class="dropdown-item" href="#">
                                     Submenu &raquo;

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Armor_infoController.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\Equipment_infoController.cs" />
     <Compile Include="Controllers\Equipment_TypeController.cs" />
     <Compile Include="Controllers\RingsController.cs" />
@@ -266,6 +267,11 @@
     <Content Include="Views\Armor_info\Details.cshtml" />
     <Content Include="Views\Armor_info\Edit.cshtml" />
     <Content Include="Views\Armor_info\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\Delete.cshtml" />
+    <Content Include="Views\Classes\Details.cshtml" />
+    <Content Include="Views\Classes\Edit.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -30,6 +30,7 @@ namespace projectE.Models
         public short Intell { get; set; }
         public short Fai { get; set; }
         public short Levels { get; set; }
+        public Nullable<short> Arc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Classes_build> Classes_build { get; set; }

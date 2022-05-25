@@ -36,6 +36,7 @@
     <Property Name="Intell" Type="smallint" Nullable="false" />
     <Property Name="Fai" Type="smallint" Nullable="false" />
     <Property Name="Levels" Type="smallint" Nullable="false" />
+    <Property Name="Arc" Type="smallint" />
   </EntityType>
   <EntityType Name="Classes_build">
     <Key>

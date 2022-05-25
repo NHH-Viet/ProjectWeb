@@ -1,0 +1,135 @@
+﻿@model IEnumerable<projectE.Models.Class>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    @foreach (var item in Model)
+    {
+        string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+        string ten = item.Class_Name;
+        string temp = ten.ToLower().Replace(" ", "_").Replace("'", "") + "_";
+        string tenitem = temp;
+        string duoi = "class_elden_ring_wiki_guide_200px.png";
+        string than = ViewBag.typeName;
+        string result = dau + tenitem + duoi;
+        <div class="col-sm-3">
+            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                <h3 class="special" style="text-align: center;"><a class="wiki_link" title="Elden Ring Hero" href="@Url.Action("Details", "Details", new { id = item.Class_ID })" target="">Hero</a></h3>
+                <p style="text-align: center;"><img title="hero_class_elden_ring_wiki_guide_200px" src="@result" alt="hero class elden ring wiki guide 200px" width="200"></p>
+                <div class="table-responsive">
+                    <table class="wiki_table" style="border: 0px;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;" colspan="2">Level @Html.DisplayFor(modelItem => item.Levels)</td>
+                            </tr>
+                            <tr>
+                                <td>Vigor @Html.DisplayFor(modelItem => item.Vigor)</td>
+                                <td>Dexterity @Html.DisplayFor(modelItem => item.Dex)</td>
+                            </tr>
+                            <tr>
+                                <td>Mind @Html.DisplayFor(modelItem => item.Mind)</td>
+                                <td>Intelligence @Html.DisplayFor(modelItem => item.Intell)</td>
+                            </tr>
+                            <tr>
+                                <td>Endurance @Html.DisplayFor(modelItem => item.Endurance)</td>
+                                <td>Faith @Html.DisplayFor(modelItem => item.Fai)</td>
+                            </tr>
+                            <tr>
+                                <td>Strength @Html.DisplayFor(modelItem => item.Strength)</td>
+                                <td>Arcane @Html.DisplayFor(modelItem => item.Arc)</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    }
+</div>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mind)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Strength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Intell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Levels)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+        string ten = item.Class_Name;
+        string temp = ten.ToLower().Replace(" ", "_").Replace("'", "") + "_";
+        string tenitem = temp;
+        string duoi = "class_elden_ring_wiki_guide_200px.png";
+        string than = ViewBag.typeName;
+        string result = dau + tenitem + duoi;
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vigor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mind)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Levels)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Class_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Class_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Class_ID })
+            </td>
+        </tr>
+    }
+</table>

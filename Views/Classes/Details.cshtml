@@ -1,0 +1,55 @@
+﻿@model projectE.Models.Class
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Class</h4>
+    <hr />
+    <table class="wiki_table">
+        <tbody>
+            <tr>
+                <th style="text-align: center;" colspan="4"> <h2>@Html.DisplayFor(model => model.Class_Name)</h2> </th>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="4"><img title="hero_class_elden_ring_wiki_guide_270px" src="/file/Elden-Ring/hero_class_elden_ring_wiki_guide_270px.png" alt="hero class elden ring wiki guide 270px" width="270" height="399"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a class="wiki_link" title="Elden Ring Level" href="/Level">Soul Lvl</a></td>
+                <td colspan="2">@Html.DisplayFor(model => model.Levels)</td>
+            </tr>
+            <tr>
+                <td><a class="wiki_link" title="Elden Ring Vigor" href="/Vigor" target="">Vigor</a></td>
+                <td>@Html.DisplayFor(model => model.Vigor)</td>
+                <td><a class="wiki_link" title="Elden Ring Dexterity" href="/Dexterity" target="">Dexterity</a></td>
+                <td>@Html.DisplayFor(model => model.Dex)</td>
+            </tr>
+            <tr>
+                <td><a class="wiki_link" title="Elden Ring Mind" href="/Mind" target="">Mind</a></td>
+                <td>@Html.DisplayFor(model => model.Mind)</td>
+                <td><a class="wiki_link" title="Elden Ring Intelligence" href="/Intelligence" target="">Intelligence</a></td>
+                <td>@Html.DisplayFor(model => model.Intell)</td>
+            </tr>
+            <tr>
+                <td><a class="wiki_link" title="Elden Ring Endurance" href="/Endurance" target="">Endurance</a></td>
+                <td>@Html.DisplayFor(model => model.Endurance)</td>
+                <td><a class="wiki_link" title="Elden Ring Faith" href="/Faith" target="">Faith</a></td>
+                <td>@Html.DisplayFor(model => model.Fai)</td>
+            </tr>
+            <tr>
+                <td><a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Strength</a></td>
+                <td>@Html.DisplayFor(model => model.Strength)</td>
+                <td><a class="wiki_link" title="Elden Ring Arcane" href="/Arcane" target="">Arcane</a></td>
+                <td>@Html.DisplayFor(model => model.Arc)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Class_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
