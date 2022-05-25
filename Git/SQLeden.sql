@@ -85,6 +85,9 @@ GO
 ALTER TABLE Armor_info
 ALTER COLUMN Mag_guard float;
 GO
+ALTER TABLE Armor_info
+ADD Light_guard float;
+GO
 CREATE TABLE Ring
 (
 	Ring_ID nvarchar(10) PRIMARY KEY,
@@ -109,6 +112,9 @@ CREATE TABLE Classes
 	Fai smallint NOT NULL,
 	Levels smallint NOT NULL,
 )
+GO
+ALTER TABLE Classes
+ADD Arc smallint NOT NULL;
 GO
 ALTER TABLE Classes
 ADD CONSTRAINT Min_check CHECK (Level>0);
