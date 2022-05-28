@@ -133,6 +133,9 @@
 
         @if (!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
 
+        @Html.ActionLink("Edit", "Edit", new { id = item.E_ID })
+        @Html.ActionLink("Create New", "Create")
+
 
     </td>
 </tr>

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+@*<h2>Details</h2>*@
 <table class="wiki_table">
     <tbody>
         <tr>
@@ -56,7 +56,7 @@
         </tr>
         <tr>
             <td><a class="wiki_link" title="Elden Ring Helms" href="/Helms">@Html.DisplayFor(model => model.ET_ID)</a></td>
-            <td><a class="wiki_link" title="Elden Ring Weight" href="/Weight">Wgt.</a>&nbsp;<span style="color: #ffffff;">@Html.DisplayFor(model => model.Weigth)</span></td>
+            <td><a class="wiki_link" title="Elden Ring Weight" href="/Weight">Wgt.</a>&nbsp;<span style="color: #ff0000;">@Html.DisplayFor(model => model.Weigth)</span></td>
         </tr>
     </tbody>
 </table>

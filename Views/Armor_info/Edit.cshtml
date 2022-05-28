@@ -11,8 +11,140 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
+<div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.A_ID)
+    <table class="wiki_table">
+        <tbody>
+            <tr>
+                <th colspan="2">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.A_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.A_Name, "", new { @class = "text-danger" })
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2"><img style="width: 200px; height: 200px;" title="Albinauric Mask" src="/file/Elden-Ring/albinauric_mask_elden_ring_wiki_guide_200px.png" alt="albinauric mask elden ring wiki guide 200px" width="200" height="200"></td>
+            </tr>
+            <tr>
+                <td style="width: 140px;">
+                    <img style="float: left;" title="damage_negation_icon_elden_ring_wiki_guide__18px" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/damage_negation_icon_elden_ring_wiki_guide__18px.png" alt="damage negation icon elden ring wiki guide 18px" width="18" height="18">Dmg Negation
+                    <div class="lineleft">
+                        <a class="wiki_link" title="Elden Ring Physical Defense" href="/Physical+Defense">Phy</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phy_guard, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phy_guard, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring VS Strike Defense" href="/VS+Strike+Defense">VS Strike</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phy_strike, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phy_strike, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring VS Slash Defense" href="/VS+Slash+Defense">VS Slash</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phy_slash, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phy_slash, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring VS Pierce Defense" href="/VS+Pierce+Defense">VS Pierce</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phy_thurst, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phy_thurst, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <span style="color: #3fbddd;"><a class="wiki_link" style="color: #3fbddd;" title="Elden Ring Magic Defense" href="/Magic+Defense">Magic</a></span>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Mag_guard, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Mag_guard, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <span style="color: #ff9900;"><a class="wiki_link" style="color: #cc9d57;" title="Elden Ring Fire Defense" href="/Fire+Defense">Fire</a></span>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Fie_guard, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Fie_guard, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <span style="color: #ffff00;"><a class="wiki_link" style="color: #d5d559;" title="Elden Ring Lightning Defense" href="/Lightning+Defense">Ligt</a></span>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Light_guard, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Light_guard, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <span style="color: #ffcc99;"><a class="wiki_link" style="color: #ffcc99;" title="Elden Ring Holy Defense" href="/Holy+Defense">Holy</a></span>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Holy_guard, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Holy_guard, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="width: 140px;">
+                    <img style="float: left;" title="resisntace_icon_elden_ring_wiki_guide__18px" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/damage_negation_icon_elden_ring_wiki_guide__18px.png" alt="resisntace icon elden ring wiki guide 18px" width="18" height="18">Resistance
+                    <div class="lineleft">
+                        <a class="wiki_link" title="Elden Ring Immunity" href="/Immunity" target="">Immunity</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Inmunity, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Inmunity, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring Robustness" href="/Robustness" target="">Robustness</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Robustness, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Robustness, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring Focus" href="/Focus" target="">Focus</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Focus, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Focus, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring Vitality" href="/Vitality" target="">Vitality</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Vitality, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Vitality, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <a class="wiki_link" title="Elden Ring Poise" href="/Poise" target="">Poise</a>&nbsp;
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Poise, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Poise, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="wiki_link" title="Elden Ring Helms" href="/Helms"></a>
+                    <div class="col-md-10">
+                        @Html.DropDownList("ET_ID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ET_ID, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+                <td><a class="wiki_link" title="Elden Ring Weight" href="/Weight">Wgt.</a>&nbsp;
+                    <span style="color: #ff0000;">
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Weigth, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Weigth, "", new { @class = "text-danger" })
+                        </div>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>    
+@*<div class="form-horizontal">
     <h4>Armor_info</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -150,7 +282,7 @@
             <input type="submit" value="Save" class="btn btn-default" />
         </div>
     </div>
-</div>
+</div>*@
 }
 
 <div>
