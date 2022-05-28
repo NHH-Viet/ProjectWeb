@@ -40,6 +40,12 @@ CREATE TABLE Equipment_info
 )
 GO
 ALTER TABLE Equipment_info
+ADD Scl_Arc char;
+GO
+ALTER TABLE Equipment_info
+ADD R_Scl_Arc smallint;
+GO
+ALTER TABLE Equipment_info
 ADD CONSTRAINT Min_check CHECK (Weigth>0);
 GO
 CREATE TABLE Armor_info
