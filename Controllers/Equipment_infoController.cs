@@ -38,11 +38,13 @@ namespace projectE.Controllers
                
             }
         }
-        public ActionResult Index(int id)
+        public ActionResult Index()
          
         {
+            ViewBag.check = checkUser()["layout"];
+            ViewBag.isUser = checkUser()["isUser"];
 
-
+            /*int id = null;
             ViewBag.check = checkUser()["layout"];
             ViewBag.isUser = checkUser()["isUser"];
 
@@ -53,7 +55,8 @@ namespace projectE.Controllers
 
             ViewBag.typeName = db.Equipment_Type.First(i => i.ET_ID == id.ToString()).Type_Names;
 
-            return View(equipment_info.ToList());
+            return View(equipment_info.ToList());*/
+            return View(db.Equipment_info.ToList());
         }
 
         // GET: Equipment_info/Details/5
@@ -85,7 +88,7 @@ namespace projectE.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,SKill_Cost,ET_ID")] Equipment_info equipment_info)
+        public ActionResult Create([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,SKill_Cost,ET_ID")] Equipment_info equipment_info)
         {
             if (ModelState.IsValid)
             {
@@ -119,7 +122,7 @@ namespace projectE.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,SKill_Cost,ET_ID")] Equipment_info equipment_info)
+        public ActionResult Edit([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,SKill_Cost,ET_ID")] Equipment_info equipment_info)
         {
             if (ModelState.IsValid)
             {

@@ -114,6 +114,8 @@
           <Property Name="R_Scl_Fai" Type="smallint" />
           <Property Name="SKill_Cost" Type="nvarchar" MaxLength="20" />
           <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Scl_Arc" Type="char" MaxLength="1" />
+          <Property Name="R_Scl_Arc" Type="smallint" />
         </EntityType>
         <EntityType Name="Equipment_Type">
           <Key>
@@ -714,6 +716,8 @@
           <NavigationProperty Name="Classes_build4" Relationship="Self.FK__Classes_b__Right__3D5E1FD2" FromRole="Equipment_info" ToRole="Classes_build" />
           <NavigationProperty Name="Classes_build5" Relationship="Self.FK__Classes_b__Right__3E52440B" FromRole="Equipment_info" ToRole="Classes_build" />
           <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_info" ToRole="Equipment_Type" />
+          <Property Name="Scl_Arc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="R_Scl_Arc" Type="Int16" />
         </EntityType>
         <EntityType Name="Equipment_Type">
           <Key>
@@ -1284,6 +1288,8 @@
           <EntitySetMapping Name="Equipment_info">
             <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_info">
               <MappingFragment StoreEntitySet="Equipment_info">
+                <ScalarProperty Name="R_Scl_Arc" ColumnName="R_Scl_Arc" />
+                <ScalarProperty Name="Scl_Arc" ColumnName="Scl_Arc" />
                 <ScalarProperty Name="E_ID" ColumnName="E_ID" />
                 <ScalarProperty Name="E_Name" ColumnName="E_Name" />
                 <ScalarProperty Name="Phy_dame" ColumnName="Phy_dame" />

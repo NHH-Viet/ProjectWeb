@@ -4,12 +4,6 @@
     ViewBag.Title = "Index";
     Layout = ViewBag.Check;
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -18,12 +12,14 @@
         <th>
             Phy
         </th>
+        <th>
             Mag
+        </th>
         <th>
             Fire
         </th>
         <th>
-           Ligh
+            Ligh
         </th>
         <th>
             Holy
@@ -67,9 +63,9 @@
 <tr>
     <td>
         <a style="text-decoration-line:none;" href="@Url.Action("Details", "Equipment_info", new { id = item.E_ID })">
-        <img height="100" width="100" src="@result" alt="Alternate Text" />
+            <img height="100" width="100" src="@result" alt="Alternate Text" />
         </a>
-        
+
         @Html.DisplayFor(modelItem => item.E_Name)
     </td>
     <td>
@@ -121,7 +117,11 @@
         @Html.DisplayFor(modelItem => item.Scl_Fai)<br />
         @Html.DisplayFor(modelItem => item.R_Scl_Fai)
     </td>
-    
+    <td>
+        @Html.DisplayFor(modelItem => item.Scl_Arc)<br />
+        @Html.DisplayFor(modelItem => item.R_Scl_Arc)
+    </td>
+
     <td>
         @Html.DisplayFor(modelItem => item.Weigth)
     </td>
@@ -129,11 +129,11 @@
         @Html.DisplayFor(modelItem => item.SKill_Cost)
     </td>
     <td>
-        @if(!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
+        @if (!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
 
-        @if(!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
-          
-       
+        @if (!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Delete", "Delete", new { id = item.E_ID }); }
+
+
     </td>
 </tr>
 }

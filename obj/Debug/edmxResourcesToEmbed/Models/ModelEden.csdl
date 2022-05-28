@@ -141,6 +141,8 @@
     <NavigationProperty Name="Classes_build4" Relationship="Self.FK__Classes_b__Right__3D5E1FD2" FromRole="Equipment_info" ToRole="Classes_build" />
     <NavigationProperty Name="Classes_build5" Relationship="Self.FK__Classes_b__Right__3E52440B" FromRole="Equipment_info" ToRole="Classes_build" />
     <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_info" ToRole="Equipment_Type" />
+    <Property Name="Scl_Arc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="R_Scl_Arc" Type="Int16" />
   </EntityType>
   <EntityType Name="Equipment_Type">
     <Key>
