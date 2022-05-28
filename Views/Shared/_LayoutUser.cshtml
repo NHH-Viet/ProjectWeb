@@ -19,24 +19,42 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdow
+                            Equipment
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>@Html.ActionLink("Weapons", "Index", "Equipment_Type", null, new { @class = "dropdown-item" })</li>
-                            <li><a class="dropdown-item" href="#">@Html.ActionLink("Armor", "Index", "Armor_info", null, new { @class = "dropdown-item" })</a></li>
                             <li>
                                 <a class="dropdown-item" href="#">
-                                    Submenu &raquo;
+                                    @Html.ActionLink("Weapon", "Index", "Equipment_Type", null, new { @class = "dropdown-item" })
                                 </a>
                                 <ul class="dropdown-menu dropdown-submenu">
                                     <li>
-                                        <a class="dropdown-item" href="#">Submenu item 1</a>
+                                        <a class="dropdown-item" href="#">1</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Submenu item 2</a>
+                                        <a class="dropdown-item" href="#">2</a>
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    @Html.ActionLink("Armor", "Index", "Armor_info", null, new { @class = "dropdown-item" })
+                                </a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Helm</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Chest</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Gauntlet</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Leg Armor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Talisman", "Index", "Rings", null, new { @class = "dropdown-item" })</li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

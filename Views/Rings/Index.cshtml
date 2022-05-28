@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Add new Ring</h2>
+@*<h2>Add new Ring</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Ring_Name)
@@ -24,23 +24,52 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ring_Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weigth)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Effect)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Ring_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Ring_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Ring_ID })
-        </td>
-    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ring_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weigth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Effect)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Ring_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Ring_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Ring_ID })
+            </td>
+        </tr>
+    }
+</table>*@
+<p style="text-align: center; max-width: 600px;">
+    <strong>Quick Search of All Talismans</strong>
+    <input class="searchable-filter form-control" type="text" placeholder="Filter by Name, Type, Etc..." onkeyup="filterSearchable(this.value.toUpperCase(), 'jumbo');">
+</p>
+@foreach (var item in Model)
+{
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: center;">Talisman Name</th>
+                <th style="text-align: center;">Effect</th>
+                <th style="text-align: center;">Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;"> <h4><a class="wiki_link" title="" href="" target=""><img style="display: block; margin-left: auto; margin-right: auto; width: 75px; height: 75px;" title="" src="" alt="" width="75" height="75">@Html.DisplayFor(modelItem => item.Ring_Name)</a></h4> </td>
+                <td>@Html.DisplayFor(modelItem => item.Effect)</td>
+                <td style="text-align: center;">@Html.DisplayFor(modelItem => item.Weigth)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Ring_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Ring_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Ring_ID })
+                </td>
+            </tr>
+        </tbody>
+    </table>
 }
 
-</table>
