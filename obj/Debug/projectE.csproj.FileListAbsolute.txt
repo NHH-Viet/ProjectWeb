@@ -80,3 +80,4 @@ E:\VSwwp\projectE\obj\Debug\projectE.csproj.CoreCompileInputs.cache
 E:\VSwwp\projectE\obj\Debug\projectE.csproj.CopyComplete
 E:\VSwwp\projectE\obj\Debug\projectE.dll
 E:\VSwwp\projectE\obj\Debug\projectE.pdb
+E:\VSwwp\projectE\obj\Debug\projectE.csproj.AssemblyReference.cache
