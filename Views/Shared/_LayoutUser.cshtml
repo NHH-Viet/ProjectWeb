@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="@Url.Action("HomePage", "HomePage")">Navbar</a>
+            <a class="navbar-brand" href="@Url.Action("HomePage", "HomePage")">Home Page</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,6 +63,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>@Html.ActionLink("Classes", "Index", "Classes", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Stats", "Index", "Stats", null, new { @class = "dropdown-item" })</li>
                             <li>
                                 <a class="dropdown-item" href="#">
                                     Submenu &raquo;

@@ -1,0 +1,385 @@
+﻿
+@{
+    ViewBag.Title = "Arcane";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div id="wrapper">
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="page-chunk">
+                    <div id="search-content" style="display: none;">
+                        <style>
+                            .gsc-tabHeader.gsc-tabhActive {
+                                color: inherit;
+                            }
+
+                            .cse .gsc-control-cse, .gsc-control-cse {
+                                background-color: inherit;
+                                border: inherit;
+                            }
+
+                            .gsc-refinementsArea {
+                                display: none;
+                            }
+
+                            .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gs-result .gs-title, .gs-result .gs-title * {
+                                color: #FFF;
+                            }
+
+                                .gs-result .gs-title, .gs-result .gs-title * {
+                                    color: #FFF;
+                                }
+
+                            .gsc-preview-reviews, .gsc-control-cse .gs-snippet, .gsc-control-cse .gs-promotion em, .gsc-control-cse .gs-snippet, .gsc-control-cse .gs-promotion em {
+                                color: inherit;
+                            }
+
+                            .gsc-table-result {
+                                border: none;
+                            }
+
+                                .gsc-table-result th, td {
+                                    border: none;
+                                }
+
+                            .gsc-resultsHeader {
+                                display: none;
+                            }
+
+                            .gsc-adBlock {
+                                display: none;
+                            }
+
+                            .gs-richsnippet-box {
+                                display: none !important;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-page {
+                                color: inherit;
+                            }
+
+                            .gsc-webResult .gsc-result {
+                                background-color: inherit;
+                            }
+
+                            .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+                                color: inherit;
+                            }
+
+                            .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+                                color: inherit;
+                            }
+
+                            .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+                                background-color: inherit !important;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+                                border-color: inherit;
+                                background-color: inherit;
+                                color: inherit;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-page {
+                                border-color: inherit;
+                                background-color: inherit;
+                                color: inherit;
+                            }
+
+                            .gsc-webResult.gsc-result {
+                                padding: .25em;
+                                border: none !important;
+                                margin-bottom: 0
+                            }
+
+                            .gsc-above-wrapper-area {
+                                border-bottom: none !important;
+                                padding: 5px 0
+                            }
+
+                            .cse .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result.gsc-promotion:hover, .gsc-results .gsc-imageResult-classic:hover, .gsc-results .gsc-imageResult-column:hover {
+                                border: none !important
+                            }
+
+                            .gsc-tabsArea {
+                                margin-top: 12px;
+                                margin-bottom: 0;
+                                height: 29px;
+                                border-bottom: none !important
+                            }
+
+                            .gsc-result-info-container {
+                                text-align: left;
+                                display: none !important
+                            }
+                        </style>
+                        <h4 class="search-title">Search Results</h4>
+                        <ul id="search-result" class="list-unstyled list-results"></ul>
+                        <div id="search-result-paging"></div>
+                        <gcse:searchresults></gcse:searchresults>
+                    </div>
+                    <div id="main-content" data-wid="9e216d5b-fa7a-4724-bcf5-2a8fd15cce86" data-pid="5b28bbcd-17e4-4348-bdfa-bd48963b1845" data="010|010|010" data-ga="u|a|a|o|o|o|o|u">
+                        <div itemscope="" itemtype="https://schema.org/Article">
+
+
+
+
+
+
+
+                            <div id="page-content-header-container">
+                                <div class="clearfix">
+                                    <div class="page-segment">
+                                        <h1 itemprop="headline">
+
+
+                                            <a id="page-title" href="https://eldenring.wiki.fextralife.com/Arcane">Arcane | Elden Ring Wiki</a>
+
+
+                                        </h1>
+
+                                        <div class="page-segment-btns">
+
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <button id="btnPE" style="display: none;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="hidden-xs"> Edit</span></button>
+                                                <button id="btnComments" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="view discussions"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span><span id="amcom"> 441</span></button>
+                                                <button id="btnPageHistory" class="btn btn-default hidden-xs hidden-sm" data-toggle="tooltip" data-placement="bottom" title="view 84 revisions"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 84</button>
+                                                <button type="button" class="btn btn-default" data-toggle="dropdown" aria-expanded="false" title="more options">…</button>
+                                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                    <li><a id="btnTrddmA" href="" style="display: none;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Create new page</a></li>
+                                                    <li><a id="btnTrddmB" href="" style="display: none;"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</a></li>
+                                                    <li><a id="btnTrddmHistory" href=""><span class="glyphicon glyphicon-time" aria-hidden="true"></span> History</a></li>
+                                                    <li><a id="btnTrddmChanges" href=""><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Recent Changes</a></li>
+                                                    <li><a id="btnTrddmE" href="" style="display: none;"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Rename</a></li>
+                                                    <li><a id="btnTrddmF" href="" style="display: none;"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Redirect</a></li>
+                                                    <li><a id="btnTrddmG" href="" style="display: none;"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Lock</a></li>
+                                                    <li><a id="btnTrddmH" href="" style="display: none;"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Unlock</a></li>
+
+                                                    <li id="divider-trddm-a" class="divider" style="display: none;"></li>
+                                                    <li><a id="btnTrddmJ" href="" style="display: none;"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Permissions</a></li>
+                                                    <li><a id="btnTrddmK" href="" style="display: none;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Javascript</a></li>
+                                                    <li><a id="btnTrddmL" href="" style="display: none;"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> Tags</a></li>
+                                                    <li><a id="btnTrddmM" href="" style="display: none;"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Edit Open Graph</a></li>
+                                                    <li id="divider-trddm-b" class="divider" style="display: none;"></li>
+                                                    <li><a id="btnTrddmN" href="" style="display: none;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Clear page cache</a></li>
+                                                    <li><a id="btnTrddmO" href="" style="display: none;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Clear comments cache</a></li>
+                                                    <li id="divider-trddm-c" class="divider" style="display: none;"></li>
+                                                    <li><a id="btnTrddmP" href="" style="display: none;"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> File Manager</a></li>
+                                                    <li><a id="btnTrddmQ" href="" style="display: none;"><span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span> Page Manager</a></li>
+                                                    <li><a id="btnTrddmR" href="" style="display: none;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Wiki Templates</a></li>
+                                                    <li><a id="btnTrddmS" href="" style="display: none;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Comments Approval</a></li>
+                                                    <li><a id="btnTrddmT" href="" style="display: none;"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Wiki Settings</a></li>
+                                                    <li><a id="btnTrddmU" href="" style="display: none;"><span class="glyphicon glyphicon-king" aria-hidden="true"></span> Wiki Manager</a></li>
+                                                    <li id="divider-trddm-d" class="divider" style="display: none;"></li>
+                                                    <li><a id="btnTrddmV" href="" style="display: none;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="breadcrumb-wrapper">
+
+
+
+                                    <div class="breadcrumbs pull-left">
+                                        <div id="breadcrumbs-container">
+                                            <a href="https://eldenring.wiki.fextralife.com/Character+Information">Character Information</a>&nbsp;/&nbsp;<a href="https://eldenring.wiki.fextralife.com/Stats">Stats</a>
+                                            <div id="breadcrumbs-bcontainer" style="display:none;">&nbsp;&nbsp;<a id="btnCreateBreadcrumb" title="Add Breadcrumb" href="#">+</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="revisiondate pull-right"><time itemprop="dateModified" id="dateModified" datetime="2022-05-19T23:41:45+0700">Updated: 19 May 2022 23:41</time></div>
+
+
+                                </div>
+                            </div>
+                            <div id="palerts" class="clearfix"></div>
+
+
+                            <br>
+
+                            <div id="edition" style="display:none; margin-top: 0px;"></div>
+
+                            <div id="sub-main">
+                                <div id="wiki-content-block">
+
+
+
+
+
+                                    <div id="infobox" class="infobox">
+                                        <div class="table-responsive">
+                                            <table class="wiki_table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th colspan="2"> <h2>Arcane</h2> </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Type</td>
+                                                        <td>Main Attribute</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Effects</td>
+                                                        <td>Attribute governing <a class="wiki_link" title="Elden Ring Discovery" href="/Discovery" target="">Discovery</a>.<br>Also affects <a class="wiki_link" title="Elden Ring Holy Defense" href="/Holy+Defense" target="">Holy Defense</a>, <a class="wiki_link" title="Elden Ring Vitality" href="/Vitality" target="">Vitality</a>, and certain <a class="wiki_link" title="Elden Ring Sorceries" href="/Sorceries">Sorceries</a>&nbsp;and <a class="wiki_link" title="Elden Ring Incantations" href="/Incantations" target="">Incantations</a>.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <p><strong>Arcane</strong>&nbsp;is&nbsp;one of the <a class="wiki_link" title="Elden Ring Stats" href="/Stats">Stats</a>&nbsp;in <a class="wiki_link" title="Elden Ring" href="/Elden+Ring" target="">Elden Ring</a>. <strong>Stats</strong>&nbsp;refer to various properties that govern your character's strengths and weaknesses, as well as how they are affected by interactions in and out of combat.&nbsp;<strong>Arcane</strong>&nbsp;primarily&nbsp;influences the <a class="wiki_link" title="Elden Ring Discovery" href="/Discovery">Discovery</a>&nbsp;stat,&nbsp;increasing the chance to find items when defeating enemies. Arcane is also used as a modifier for weapons that scale with the Arcane stat, improving the effectiveness and damage of certain <a class="wiki_link" title="Elden Ring Spells" href="/Spells" target="">Spells</a>. It is one of the 8&nbsp;<strong>Main</strong>&nbsp;<strong>Attributes</strong>&nbsp;that players can spend <a class="wiki_link" title="Elden Ring Runes" href="/Runes">Runes</a>&nbsp;on&nbsp;to&nbsp;level up, increasing the Stat's effectiveness and influencing their relative secondary stats. Stats such as <strong>Intelligence</strong>&nbsp;are an important aspect of character progression in Elden Ring.</p>
+                                    <p>&nbsp;</p>
+                                    <h3 class="bonfire">Elden Ring Arcane Stat&nbsp;General Information</h3>
+                                    <ul>
+                                        <li>
+                                            <strong>Arcane</strong> is your primary way of increasing your <a class="wiki_link" title="Elden Ring Discovery" href="/Discovery">Discovery</a>&nbsp;stat. The higher your character's Discovery the higher the chance items will drop from enemies, including making rare drops less rare.
+                                            <ul>
+                                                <li>Every character has a base of 100 Discovery</li>
+                                                <li>Flat rate of +1 Discovery per Arcane level</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Arcane</strong> primarily increases your <a class="wiki_link" title="Elden Ring Holy Defense" href="/Holy+Defense" target="">Holy Defense</a>, which increases your defense against attacks that deal <a class="wiki_link" title="Elden Ring Holy Damage" href="/Holy+Damage" target="">Holy Damage</a>.
+                                            <ul>
+                                                <li>+2 Holy Defense per&nbsp;level from 1 to 20 Arcane</li>
+                                                <li>+0.66 Holy Defense per&nbsp;level from 21 to&nbsp;35 Arcane</li>
+                                                <li>+0.4 Holy Defense per level&nbsp;from 36 to 60 Arcane</li>
+                                                <li>+0.25 Holy Defense per&nbsp;level from 61 to 99 Arcane</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Arcane</strong> also primarily increases your <a class="wiki_link" title="Elden Ring Vitality" href="/Vitality">Vitality</a>, which increases your resistance to <a class="wiki_link" title="Elden Ring Death Blight" href="/Death+Blight">Death Blight</a>.
+                                            <ul>
+                                                <li>+1 Vitality per level from 1 to 15 Arcane</li>
+                                                <li>+0.6 Vitality per level from 16 to 40 Arcane</li>
+                                                <li>+0.5 Vitality per level from 41 to 60 Arcane</li>
+                                                <li>+0.25 Vitality per level from 61 to 99 Arcane</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Arcane&nbsp;</strong>affects any&nbsp;<a class="wiki_link" title="Elden Ring Arrow" href="/Arrow" target="">Arrow</a>&nbsp;status buildup if the <a class="wiki_link" title="Elden Ring Bows" href="/Bows">Bow</a>&nbsp;scales with <strong>Arcane</strong>, which currently only includes the <a class="wiki_link" title="Elden Ring Serpent Bow" href="/Serpent+Bow">Serpent Bow</a>.</li>
+                                        <li>
+                                            For&nbsp;<a class="wiki_link" title="Elden Ring Weapons" href="/Weapons">weapons</a> that have Arcane scaling, Arcane&nbsp;scales up&nbsp;the amount of <img title="hemorrhage_status_effect_elden_ring_wiki_guide_25px" src="/file/Elden-Ring/hemorrhage_status_effect_elden_ring_wiki_guide_25px.png" alt="hemorrhage status effect elden ring wiki guide 25px" width="25" height="25"><a class="wiki_link" title="Elden Ring Hemorrhage" href="/Hemorrhage">Blood Loss</a>&nbsp;build-up, <a class="wiki_link" title="Elden Ring Poison" href="/Poison">Poison</a> build-up, <a class="wiki_link" title="Elden Ring Sleep" href="/Sleep">Sleep</a> build-up, and <a class="wiki_link" title="Elden Ring Madness" href="/Madness">Madness</a> build-up on the weapon.
+                                            <ul>
+                                                <li>Arcane scaling can be added to weapons using a Blood, Poison, or Occult Enhancement. The <a class="wiki_link" title="Elden Ring Black Whetblade" href="/Black+Whetblade">Black Whetblade</a> facilitates use of these enhancements.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Some <a class="wiki_link" title="Elden Ring Weapons" href="/Weapons">Weapons</a>&nbsp;require a certain amount of levels in <strong>Arcane</strong> to be able to wield them effectively.</li>
+                                        <li>When scaling the attack power of a melee armament, like all stats,&nbsp;<strong>Arcane&nbsp;</strong>soft caps differ depending on the weapon and the damage type being scaled. Scaling on physical damage may be 18/60/80 or 20/60/80. Scaling on&nbsp;magic, fire, lightning, or holy damage is always 20/50/80.</li>
+                                        <li>When scaling the status effect build-up of a melee armament&nbsp;or a spell that has <strong>Arcane</strong> scaling, <strong>Arcane&nbsp;</strong>soft caps are 25/45/60. Note that for spells, the catalyst must have <strong>Arcane</strong> scaling and&nbsp;the&nbsp;amount of increase in build-up is significantly smaller than melee armaments.</li>
+                                        <li>When scaling the status effect build-up of throwing weapons, such as&nbsp;pots, <strong>Arcane</strong>&nbsp;a unique scaling curve formula for this with soft caps at 15/30/50.</li>
+                                        <li>When scaling the status effect build-up of poison on arrows used with the <a class="wiki_link" title="Elden Ring Serpent Bow" href="/Serpent+Bow">Serpent Bow</a>, <strong>Arcane</strong>&nbsp;has a unique scaling curve formula for this with soft caps at 15/30/50. However, for scaling the status effect build-up of blood or sleep arrows used with the Serpent Bow, <strong>Arcane</strong> scales the same as melee armaments, with soft caps at&nbsp;25/45/60.</li>
+                                        <li>When scaling the sorcery scaling of the <a class="wiki_link" title="Elden Ring Albinauric Staff" href="/Albinauric+Staff">Albinauric Staff</a>&nbsp;or the incantation scaling of the <a class="wiki_link" title="Elden Ring Dragon Communion Seal" href="/Dragon+Communion+Seal">Dragon Communion Seal</a>, <strong>Arcane</strong> soft caps are 15/30/45.</li>
+                                    </ul>
+                                    <p>&nbsp;</p><div data-adunit-name="i-scroll-ad-b77727a1-3b7d-44bd-9a53-45081433947b" style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 8px 0px; min-height: 90px;"><div id="i-scroll-ad-b77727a1-3b7d-44bd-9a53-45081433947b" style="width: 100%; justify-content: center; flex-direction: column; align-items: center; min-height: 90px;"></div></div>
+                                    <h3 class="bonfire" style="text-align: left;">List of Equipment that increases Arcane</h3>
+                                    <div class="table-responsive">
+                                        <table class="sortable wiki_table" style="width: 1182px;">
+                                            <thead>
+                                                <tr style="height: 46px;">
+                                                    <td style="width: 145px; height: 46px; text-align: center;">Equipment</td>
+                                                    <td style="width: 100.9px; height: 46px; text-align: center;">Equipment Type</td>
+                                                    <td style="width: 87.1px; height: 46px; text-align: center;">Arcane Increase</td>
+                                                    <td style="width: 836px; height: 46px; text-align: center;">Location</td>
+                                                    <td style="width: 836px; height: 46px; text-align: center;">Other Effects</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" title="Elden Ring Marika's Scarseal" href="/Marika's+Scarseal"><img title="marikas_scarseal_talisman_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/marikas_scarseal_talisman_elden_ring_wiki_guide_200px.png" alt="marikas scarseal talisman elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Marika's Scarseal" href="/Marika's+Scarseal" target="">Marika's Scarseal</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Talisman</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+3</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Found on a corpse at the base of the waterfall found at the highest level of&nbsp;Siofra River. [Map Link]</p> </td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Increase mind, intelligence, and faith, by +3 each.<br>Increases all damage taken by 10%</p> </td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" title="Elden Ring Marika's Soreseal" href="/Marika's+Soreseal"><img style="width: 75px; height: 75px;" title="marikas_soreseal_talisman_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/marikas_soreseal_talisman_elden_ring_wiki_guide_200px.png" alt="marikas soreseal talisman elden ring wiki guide 200px" width="75" height="75"></a></p> <p><a class="wiki_link" title="Elden Ring Marika's Soreseal" href="/Marika's+Soreseal" target="">Marika's Soreseal</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Talisman</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+5</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Elphael, Brace of the Haligtree: Found on an altar in a sealed room in the southeast lower levels. This room requires a Stonesword Key to unlock. [Map Link]</p> </td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Increase mind, intelligence, and faith, by +5 each.<br>Increases all damage taken by 15%</p> </td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="marais_mask_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/marais_mask_elden_ring_wiki_guide_200px.png" alt="marais mask elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Marais Mask" href="/Marais+Mask" target="">Marais Mask</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+1</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Dropped by Maleigh Marais, Shaded Castle Castellan, a hostile NPC found in the fields west of The Shaded Castle. [Map Link]</p> </td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>-</p> </td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="silver_tear_mask_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/silver_tear_mask_elden_ring_wiki_guide_200px.png" alt="silver tear mask elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Silver Tear Mask" href="/Silver+Tear+Mask" target="">Silver Tear Mask</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+8</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Dropped by the Mimic Tear boss in Nokron, Eternal City. [Map Link]</p> </td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Reduces physical damage dealt by 5%</p> </td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="witchs_glintstone_crown_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/witchs_glintstone_crown_elden_ring_wiki_guide_200px.png" alt="witchs glintstone crown elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Witch's Glintstone Crown" href="/Witch's+Glintstone+Crown" target="">Witch's Glintstone Crown</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+3</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">Obtained by progressing in Sorceress Sellen's Questline</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;"> <p>Increases Intelligence by +3, and reduces total stamina by 18%.</p> </td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="mask_of_confidence_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/mask_of_confidence_elden_ring_wiki_guide_200px.png" alt="mask of confidence elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Mask of Confidence" href="/Mask+of+Confidence" target="">Mask of Confidence</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+3</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">Found on a corpse laying on the walls of the secret area of the unlocked using the Carian Inverted Statue. [Map Link]</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">-</td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="imp_head_(elder)_elden_ring_wiki_guide_200px" src="/file/Elden-Ring/imp_head_(elder)_elden_ring_wiki_guide_200px.png" alt="imp head (elder) elden ring wiki guide 200px" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Imp Head (Elder)" href="/Imp+Head+(Elder)" target="">Imp Head (Elder)</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+2</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">Can be found inside the Consecrated Snowfield Catacombs. In a room on the second floor, guarded by a Burial Tree Watchdog. [Map Link]</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">-</td>
+                                                </tr>
+                                                <tr style="height: 38.2px;">
+                                                    <td style="width: 145px; height: 38.2px; text-align: center;"> <p><a class="wiki_link" href="https://eldenring.wiki.fextralife.com/"><img title="albinauric_mask" src="/file/Elden-Ring/albinauric_mask.png" alt="albinauric mask" width="75"></a></p> <p><a class="wiki_link" title="Elden Ring Albinauric Mask" href="/Albinauric+Mask" target="">Albinauric Mask</a></p> </td>
+                                                    <td style="width: 100.9px; height: 38.2px; text-align: center;">Head Armor</td>
+                                                    <td style="width: 87.1px; height: 38.2px; text-align: center;">+4</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">Found in Volcano Manor near the Guest Hall grace. Head left from the bonfire, then left again, taking the stairs to the next floor. Head outside and take the ladder to your left onto the roof. Go to the back of the roof and jump off the right side to be taken to a room with the Albinauric Mask.</td>
+                                                    <td style="width: 836px; height: 38.2px; text-align: left;">Decreases HP recovered from the Flask of Crimson Tears by 10%.</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot></tfoot>
+                                        </table>
+                                    </div>
+
+
+
+
+
+                                </div>
+                                <br><br><br>
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

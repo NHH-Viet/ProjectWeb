@@ -1,0 +1,83 @@
+﻿@model projectE.Models.Stat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stamina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stamina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eload)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eload)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phy_def)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phy_def)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mag_def)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mag_def)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Holy_def)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Holy_def)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arc_vita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arc_vita)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Stat_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

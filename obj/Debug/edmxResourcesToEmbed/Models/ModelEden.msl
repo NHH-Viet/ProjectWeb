@@ -202,5 +202,20 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EDEN_RINGModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EDEN_RINGModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Stats">
+      <EntityTypeMapping TypeName="EDEN_RINGModel.Stat">
+        <MappingFragment StoreEntitySet="Stat">
+          <ScalarProperty Name="Arc_vita" ColumnName="Arc_vita" />
+          <ScalarProperty Name="Holy_def" ColumnName="Holy_def" />
+          <ScalarProperty Name="Mag_def" ColumnName="Mag_def" />
+          <ScalarProperty Name="Phy_def" ColumnName="Phy_def" />
+          <ScalarProperty Name="Eload" ColumnName="Eload" />
+          <ScalarProperty Name="Stamina" ColumnName="Stamina" />
+          <ScalarProperty Name="FP" ColumnName="FP" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="Stat_ID" ColumnName="Stat_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,0 +1,697 @@
+﻿@model IEnumerable<projectE.Models.Stat>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stamina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phy_def)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mag_def)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Holy_def)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arc_vita)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stamina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eload)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phy_def)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mag_def)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Holy_def)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arc_vita)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Stat_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Stat_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Stat_ID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <div class="sidebar-nav">
+
+
+
+
+
+            <div class="hidden-lg">
+                <nav id="sidebar">
+                    <div class="form-inline fex-search-wrapper hidden-sm hidden-xs">
+                        <div class="input-group input-group-sm" style="width: 100%;">
+                            <input id="spf" type="text" class="form-control fex-search" placeholder="Search it up... (hit enter)" style="width: 100% !important;">
+                            <div id="search-trigger" data="not-loaded" style="display:none;"><gcse:searchbox></gcse:searchbox></div>
+                            <br>
+                            <span class="input-group-btn"></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="clearfix"></div>
+
+
+
+            <div class="space10"></div>
+
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="page-chunk">
+                    <div id="search-content" style="display: none;">
+                        <style>
+                            .gsc-tabHeader.gsc-tabhActive {
+                                color: inherit;
+                            }
+
+                            .cse .gsc-control-cse, .gsc-control-cse {
+                                background-color: inherit;
+                                border: inherit;
+                            }
+
+                            .gsc-refinementsArea {
+                                display: none;
+                            }
+
+                            .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gs-result .gs-title, .gs-result .gs-title * {
+                                color: #FFF;
+                            }
+
+                                .gs-result .gs-title, .gs-result .gs-title * {
+                                    color: #FFF;
+                                }
+
+                            .gsc-preview-reviews, .gsc-control-cse .gs-snippet, .gsc-control-cse .gs-promotion em, .gsc-control-cse .gs-snippet, .gsc-control-cse .gs-promotion em {
+                                color: inherit;
+                            }
+
+                            .gsc-table-result {
+                                border: none;
+                            }
+
+                                .gsc-table-result th, td {
+                                    border: none;
+                                }
+
+                            .gsc-resultsHeader {
+                                display: none;
+                            }
+
+                            .gsc-adBlock {
+                                display: none;
+                            }
+
+                            .gs-richsnippet-box {
+                                display: none !important;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-page {
+                                color: inherit;
+                            }
+
+                            .gsc-webResult .gsc-result {
+                                background-color: inherit;
+                            }
+
+                            .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+                                color: inherit;
+                            }
+
+                            .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+                                color: inherit;
+                            }
+
+                            .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
+                                color: inherit;
+                            }
+
+                            .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+                                background-color: inherit !important;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+                                border-color: inherit;
+                                background-color: inherit;
+                                color: inherit;
+                            }
+
+                            .gsc-results .gsc-cursor-box .gsc-cursor-page {
+                                border-color: inherit;
+                                background-color: inherit;
+                                color: inherit;
+                            }
+
+                            .gsc-webResult.gsc-result {
+                                padding: .25em;
+                                border: none !important;
+                                margin-bottom: 0
+                            }
+
+                            .gsc-above-wrapper-area {
+                                border-bottom: none !important;
+                                padding: 5px 0
+                            }
+
+                            .cse .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result.gsc-promotion:hover, .gsc-results .gsc-imageResult-classic:hover, .gsc-results .gsc-imageResult-column:hover {
+                                border: none !important
+                            }
+
+                            .gsc-tabsArea {
+                                margin-top: 12px;
+                                margin-bottom: 0;
+                                height: 29px;
+                                border-bottom: none !important
+                            }
+
+                            .gsc-result-info-container {
+                                text-align: left;
+                                display: none !important
+                            }
+                        </style>
+                        <h4 class="search-title">Search Results</h4>
+                        <ul id="search-result" class="list-unstyled list-results"></ul>
+                        <div id="search-result-paging"></div>
+                        <gcse:searchresults></gcse:searchresults>
+                    </div>
+                    <div id="main-content" data-wid="9e216d5b-fa7a-4724-bcf5-2a8fd15cce86" data-pid="32abf07b-681d-467d-add5-3ed6a4f6da1b" data="010|010|010" data-ga="u|a|a|o|o|o|o|u">
+                        <div itemscope="" itemtype="https://schema.org/Article">
+
+
+
+
+
+
+
+                            <div id="page-content-header-container">
+                                <div class="clearfix">
+                                    <div class="page-segment">
+                                        <h1 itemprop="headline">
+
+
+                                            <a id="page-title" href="#">Stats | Elden Ring Wiki</a>
+
+
+                                        </h1>
+
+                                    </div>
+                                </div>
+                                <div class="breadcrumb-wrapper">
+
+
+
+
+                                    <div class="revisiondate pull-right"><time itemprop="dateModified" id="dateModified" datetime="2022-05-26T00:08:27+0700">Updated: 26 May 2022 00:08</time></div>
+
+
+                                </div>
+                            </div>
+                            <div id="palerts" class="clearfix"></div>
+
+
+                            <br>
+
+                            <div id="edition" style="display:none; margin-top: 0px;"></div>
+
+                            <div id="sub-main">
+                                <div id="wiki-content-block">
+
+
+
+
+
+                                    <p><strong>Stats</strong> in&nbsp;<a class="wiki_link" title="Elden Ring Wiki" href="/Elden+Ring+Wiki">Elden Ring</a>&nbsp;refer to various properties that govern your character's strengths and weaknesses, as well as how they are affected by interactions in and out of combat. There are 8 main Stats in Elden Ring, as well as several dozen secondary stats which&nbsp;all contribute to your character's growth and effectiveness in various situations. Stats are affected by a number of things and can be modified by your <a class="wiki_link" title="Elden Ring Level" href="#" target="">Level</a>, <a class="wiki_link" title="Elden Ring Equipment" href="#" target="">Equipment</a>&nbsp;and any active buffs and effects.</p>
+                                    <p>Within the Status Menu, you can check your level, attributes, base stats, and more. The information shown here also reflects changes to your attack, defense, and resistances bestowed by armaments and armor that you have equipped.&nbsp;</p>
+                                    <ul>
+                                        <li>See&nbsp;<a class="wiki_link" title="Elden Ring Level" href="#" target="">Leveling</a>&nbsp;for details on how to level,&nbsp;a breakdown of runes necessary per level, and more.</li>
+                                        <li>See&nbsp;<a class="wiki_link" title="Elden Ring Runes" href="#" target="">Runes</a>&nbsp;for details on acquiring&nbsp;runes and rune acquisition boosting equipment.</li>
+                                        <li>See&nbsp;<a class="wiki_link" title="Elden Ring Rebirth" href="#" target="">Rebirth</a>&nbsp;for details on how to reallocate (respec) assigned attribute points.</li>
+                                    </ul>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4 class="bonfire">How&nbsp;do you increase Stats in Elden Ring?</h4>
+                                            <p>The primary method of increasing your stats is by Leveling Up. Near the beginning of the game and shortly after meeting <a class="wiki_link" title="Elden Ring Melina" href="#" target="">Melina</a>&nbsp;for the first time, you will unlock the ability to Level Up by spending <a class="wiki_link" title="Elden Ring Runes" href="#" target="">Runes</a>&nbsp;acquired by defeating enemies.</p>
+                                            <p>Elden Ring features 8 Main Stats (also&nbsp;referred to as <strong>Attributes</strong>). These are your <strong>Vigor</strong>, <strong>Mind</strong>, <strong>Endurance</strong>, <strong>Strength</strong>, <strong>Dexterity</strong>, <strong>Intelligence</strong>, <strong>Faith</strong> and <strong>Arcane</strong>. Each one of these main Stats governs your secondary stats such as <strong>HP</strong>, <strong>FP</strong>, <strong>Stamina</strong> and <strong>Equipment Load</strong>. Players can spend Runes at a <a class="wiki_link" title="Elden Ring Sites of Grace" href="#" target="">Site of Grace</a> to increase their main stats, effectively increasing their character Level, as well as improving their secondary stats.</p>
+                                            <p>Stats are also affected by your current Equipment and any active buffs obtained through Magic or Items. Combining these aspects is key to character progression and creating effective builds in Elden Ring.</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4 class="bonfire">Can you&nbsp;respec your Stats in Elden Ring?</h4>
+                                            <p>After completing <a class="wiki_link" title="Elden Ring Raya Lucaria Academy" href="#" target="">Raya Lucaria Academy</a>, you will be able to reset point allocations and redistribute all of your earned Stat points however you wish in exchange for a <a class="wiki_link" title="Elden Ring Larval Tear" href="#" target="">Larval Tear</a>, a rare item obtained through various means. You would most likely be over level 50 by the point you get to this, so your early build is quite important as you cannot change it: see our <a class="wiki_link" title="Elden Ring Builds" href="#">Elden Ring Builds</a> page for ideas on how to make a good character.</p>
+                                            <p>This is commonly known as 'Respeccing' and is a system that caters to players' needs for customization and trying out other builds without having to restart the game over.</p>
+                                            <p>For more information please visit our <a class="wiki_link" title="Elden Ring Rebirth" href="/Rebirth">Rebirth Page</a>.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <h2 class="titlearea">Elden Ring Stats</h2>                                  
+                                    <p>&nbsp;</p>
+                                    <h3 class="special" style="text-align: center;">Main Character Attributes</h3>
+                                    <p>This section lists all of your character's Main Stats, also referred to as <strong>Attributes</strong>. These Stats govern all other secondary Stats and can be increased by spending acquired <a class="wiki_link" title="Elden Ring Runes" href="#" target="">Runes</a>&nbsp;on them using the Level Up menu&nbsp;at any <a class="wiki_link" title="Elden Ring Sites of Grace" href="#" target="">Site of Grace</a>&nbsp;once the feature is unlocked.</p>
+                                    <p>At certain points when levelling an Attribute at higher levels, you will start getting diminishing returns, i.e. the benefit you gain&nbsp;from levelling that Main Stat is less significant than before. The level at which these diminishing returns occur are&nbsp;referred to as&nbsp;Stat Caps. The hard-cap for all Stats is 99, as you are unable to level a Stat past that level. You can find the soft-cap of each Attribute listed below.</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Vigor" href="@Url.Action("Vigor", "Stats")" target="">Vigor</a></h4>
+                                                <p style="text-align: center;">Attribute governing <a class="wiki_link" title="Elden Ring HP" href="/HP" target="">HP</a>.<br>Also affects fire resistance and&nbsp;<a class="wiki_link" title="Elden Ring Immunity" href="#" target="">Immunity</a>&nbsp;stat.</p>
+                                                <p style="text-align: center;">Soft-capped at&nbsp;40 / 60.</p>
+                                                <div class="table-responsive">
+                                                    <table class="wiki_table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Level 1-40</td>
+                                                                <td>HP gain increases from +4 to +48</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 41-60</td>
+                                                                <td>HP gain decreases from +26 to +13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 61-99</td>
+                                                                <td>HP gain decreases by +6 to +3</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Mind" href="@Url.Action("Mind", "Stats")" target="">Mind</a></h4>
+                                                <p style="text-align: center;">Attribute governing <a class="wiki_link" title="Elden Ring FP" href="#" target="">FP</a>.<br>Also affects the <a class="wiki_link" title="Elden Ring Focus" href="#" target="">Focus</a> stat.</p>
+                                                <p style="text-align: center;">Soft-capped at 50 / 57 / 60.</p>
+                                                <div class="table-responsive">
+                                                    <table class="wiki_table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Level 1-50</td>
+                                                                <td>FP gain increases from +3 to +7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 51-57</td>
+                                                                <td>FP gain&nbsp;alternates between +5 and +6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 58-60</td>
+                                                                <td>FP gain is +4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 61-99</td>
+                                                                <td>FP gain alternates between +2 and +3</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Endurance" href="@Url.Action("Endurance", "Stats")" target="">Endurance</a></h4>
+                                                <p style="text-align: center;">Attribute governing <a class="wiki_link" title="Elden Ring Stamina" href="#" target="">Stamina</a>.<br>Also affects <a class="wiki_link" title="Elden Ring Robustness" href="#" target="">Robustness</a>.<br>This attribute also determines how heavy your equipment can be.</p>
+                                                <p style="text-align: center;">Soft-capped for stamina at 50.</p>
+                                                <div class="table-responsive">
+                                                    <table class="wiki_table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Level 1-50:</td>
+                                                                <td>Stamina gain alternates between +1 and +2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 51-99:</td>
+                                                                <td>Stamina gain alternates between +0 and +1</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p style="text-align: center;">Maximum equip load soft-capped at 60.</p>
+                                                <div class="table-responsive">
+                                                    <table class="wiki_table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Level 9-60:</td>
+                                                                <td>Max Equip Load gain ranges from +1.0 to +1.6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Level 61-99:</td>
+                                                                <td>Max Equip Load gain alternates between +1.0 and +1.1&nbsp;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Strength" href="@Url.Action("Strength", "Stats")" target="">Strength</a></h4>
+                                                <p style="text-align: center;">Attribute required to wield heavy armaments.<br>Also boosts attacks power of strength-scaling armaments and affects your <a class="wiki_link" title="Elden Ring Physical Defense" href="#" target="">Physical Defense</a>.&nbsp;</p>
+                                                <p style="text-align: center;">Soft-capped at&nbsp;20 / 55 / 80.<br>The exact Attack Rating gained&nbsp;differs per weapon.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p><div data-adunit-name="i-scroll-ad-6ed2837c-f725-42a9-a4ce-e6965fd45083" style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 8px 0px; min-height: 90px;"><div id="i-scroll-ad-6ed2837c-f725-42a9-a4ce-e6965fd45083" style="width: 100%; justify-content: center; flex-direction: column; align-items: center; min-height: 90px;"></div></div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Dexterity" href="@Url.Action("Dexterity", "Stats")" target="">Dexterity</a></h4>
+                                                <p style="text-align: center;">Attribute required to wield advanced armaments. <br>Also boosts attack power of dexterity-scaling armaments, reduces casting time of <a class="wiki_link" title="Elden Ring Spells" href="#" target="">Spells</a>, softens fall damage, and makes it harder to be knocked off your horse.</p>
+                                                <p style="text-align: center;">Soft-capped at 20 / 55 / 80.<br>The exact Attack Rating gained differs per weapon.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Intelligence" href="@Url.Action("Intelligence", "Stats")" target="">Intelligence</a></h4>
+                                                <p style="text-align: center;">Attribute required to perform glintstone sorceries. Also boosts the power of intelligence-scaling <a class="wiki_link" title="Elden Ring Sorceries" href="#" target="">Sorceries</a> and improves <a class="wiki_link" title="Elden Ring Magic Defense" href="#">Magic Resistance</a>.</p>
+                                                <p style="text-align: center;">Soft-capped at 20 / 55 / 80.<br>The exact Attack Rating gained differs per weapon.</p>
+                                                <p style="text-align: center;">Intelligence Sorcery Damage Scaling soft capped at 60 / 80.<br>The exact&nbsp;Sorcery Damage gained differs per sorcery.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Faith" href="@Url.Action("Faith", "Stats")" target="">Faith</a></h4>
+                                                <p style="text-align: center;">Attribute required to perform sacred <a class="wiki_link" title="Elden Ring Incantations" href="#" target="">Incantations</a>. Also boosts the power of faith-scaling <a class="wiki_link" title="Elden Ring Incantations" href="#" target="">Incantations</a>.</p>
+                                                <p style="text-align: center;">Soft-capped at 20 / 55 / 80.<br>The exact Attack Rating gained differs per weapon.</p>
+                                                <p style="text-align: center;">Faith Incantation Damage Scaling soft capped at 60 / 80.<br>The exact&nbsp;Incantation Damage gained differs per incantation.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="hpwidget" style="border-radius: 15px 50px; max-width: 100%!important;">
+                                                <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Arcane" href="@Url.Action("Arcane", "Stats")" target="">Arcane</a></h4>
+                                                <p style="text-align: center;">Attribute governing <a class="wiki_link" title="Elden Ring Discovery" href="#" target="">Discovery</a>. <br>Also affects <a class="wiki_link" title="Elden Ring Holy Defense" href="#" target="">Holy Defense</a>, <a class="wiki_link" title="Elden Ring Vitality" href="#" target="">Vitality</a>, and certain <a class="wiki_link" title="Elden Ring Sorceries" href="#" target="">Sorceries</a> and <a class="wiki_link" title="Elden Ring Incantations" href="#" target="">Incantations</a>.</p>
+                                                <p style="text-align: center;">Soft-capped at 20 / 55 / 80.<br>The exact Attack Rating gained differs per weapon.</p>
+                                                <p style="text-align: center;">Arcane Incantation Damage Scaling soft capped at 30 / 45.<br>The exact Incantation Damage gained differs per incantation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <p>Below is a quick reference table for all Main Stat Soft Cap values when levelling:</p>
+                                    <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                                        <div class="table-responsive">
+                                            <table class="wiki_table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Stat</th>
+                                                        <th>Soft Cap</th>
+                                                        <th>Change in&nbsp;gains&nbsp;at&nbsp;softcap</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vigor</td>
+                                                        <td>40/60</td>
+                                                        <td>up to +48 / +26&nbsp;to +13&nbsp; / +6&nbsp;to +3 HP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mind</td>
+                                                        <td>50/57/60</td>
+                                                        <td>up to +7 / +5&nbsp;to +6 / +4 / +2 to +3&nbsp;FP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Endurance (Stamina)</td>
+                                                        <td>50</td>
+                                                        <td>&nbsp;+1 to +2 / +0 to +1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Endurance (Equip Load)</td>
+                                                        <td>60</td>
+                                                        <td>&nbsp;+1.0 to +1.6 (after lvl 8) / +1.0 to +1.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Strength</td>
+                                                        <td>20/55/80</td>
+                                                        <td>Depends on weapon</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dexterity</td>
+                                                        <td>20/55/80</td>
+                                                        <td>Depends on weapon</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Intelligence (Attack Rating)</td>
+                                                        <td>20/50/80</td>
+                                                        <td>Depends on weapon</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Intelligence (Sorcery Scaling)</td>
+                                                        <td>60/80</td>
+                                                        <td>Depends on sorcery</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Faith (Attack Rating)</td>
+                                                        <td>20/50/80</td>
+                                                        <td>Depends on weapon</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Faith (Incantation Scaling)</td>
+                                                        <td>60/80</td>
+                                                        <td>Depends on&nbsp;incantation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Arcane (Attack Rating)</td>
+                                                        <td>20/50/80</td>
+                                                        <td>Depends on weapon</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Arcane (Incantation Scaling)</td>
+                                                        <td>30/45</td>
+                                                        <td>Depends on incantation</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                 
+                                    <p>&nbsp;</p>
+                                    <h3 class="special" style="text-align: center;">General Stats</h3>
+                                    <p>General Stats provide useful information on the current state of the player character.</p><div data-adunit-name="i-scroll-ad-817d6d82-8152-4afd-a0e7-71b4e8b19b42" style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 8px 0px; min-height: 90px;"><div id="i-scroll-ad-817d6d82-8152-4afd-a0e7-71b4e8b19b42" style="width: 100%; justify-content: center; flex-direction: column; align-items: center; min-height: 90px;"></div></div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring HP" href="#" target="">HP</a></h4>
+                                            <p style="text-align: center;">Your life. If reduced to nothing, you die.<br>Replenish it by drinking from the <a class="wiki_link" title="Elden Ring Flask of Crimson Tears" href="#" target="">Flask of Crimson Tears</a>&nbsp;or resting at a <a class="wiki_link" title="Elden Ring Site of Grace" href="#" target="">Site of Grace</a>.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring FP" href="/FP" target="">FP</a></h4>
+                                            <p style="text-align: center;">Energy consumed to use <a class="wiki_link" title="Elden Ring Sorceries" href="/Sorceries">Sorceries</a>/<a class="wiki_link" title="Elden Ring Incantations" href="#">Incantations</a>&nbsp;and <a class="wiki_link" title="Elden Ring Skills" href="#" target="">Skills</a>.<br>Replenish it by drinking from the <a class="wiki_link" title="Elden Ring Flask of Cerulean Tears" href="#" target="">Flask of Cerulean Tears</a>&nbsp;or resting at <a class="wiki_link" title="Elden Ring Site of Grace" href="#" target="">Site of Grace</a>.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Stamina" href="#" target="">Stamina</a></h4>
+                                            <p style="text-align: center;">Required for various actions.<br>Depletes when certain actions are taken, but recovers automatically.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Equip Load" href="#" target="">Equip Load</a></h4>
+                                            <p style="text-align: center;">Total weight of equipped armaments and&nbsp;<a class="wiki_link" title="Elden Ring Armor" href="#" target="">Armor</a>. Movement slows as load increases. The rightmost number is the maximum weight that can be equipped; exceed it and movement slows dramatically.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Poise" href="#" target="">Poise</a></h4>
+                                            <p style="text-align: center;">The degree to which you can resist collapsing under enemy attacks.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Discovery" href="#" target="">Discovery</a></h4>
+                                            <p style="text-align: center;">Governs likelihood of finding items on the corpses of defeated foes.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Memory Slots" href="#" target="">Memory Slots</a></h4>
+                                            <p style="text-align: center;">The number of slots available for memorizing&nbsp;<a class="wiki_link" title="Elden Ring Sorceries" href="#" target="">Sorceries</a>&nbsp;and&nbsp;<a class="wiki_link" title="Elden Ring Incantations" href="#" target="">Incantations</a>.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <h3 class="special" style="text-align: center;">Attribute Scaling&nbsp;Information</h3>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Strength" href="#">Str</a></h4>
+                                            <p style="text-align: center;">The degree to which this armament's power or passive effects scale with <a class="wiki_link" title="Elden Ring Strength" href="#" target="">Strength</a>.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Dexterity" href="#">Dex</a></h4>
+                                            <p style="text-align: center;">The degree to which this armament's power or passive effects scale with <a class="wiki_link" title="Elden Ring Dexterity" href="#" target="">Dexterity</a>.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Intelligence" href="#">Int</a></h4>
+                                            <p style="text-align: center;">The degree to which this armament's power or passive effects scale with <a class="wiki_link" title="Elden Ring Intelligence" href="#" target="">Intelligence</a>.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Faith" href="#">Fth</a></h4>
+                                            <p style="text-align: center;">The degree to which this armament's power or passive effects scale with <a class="wiki_link" title="Elden Ring Faith" href="#" target="">Faith</a>.</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Arcane" href="#">Arc</a></h4>
+                                            <p style="text-align: center;">The degree to which this armament's power or passive effects scale with <a class="wiki_link" title="Elden Ring Arcane" href="#" target="">Arcane</a>.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <h3 class="special" style="text-align: center;">Defense&nbsp;Stats</h3>
+                                    <p style="text-align: left;">Defense&nbsp;Stats for&nbsp;<a class="wiki_link" title="Elden Ring Wiki" href="#">Elden Ring</a>&nbsp;provide useful information on the current defensive stats of the player character.</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Immunity" href="#" target="">Immunity</a></h4>
+                                            <p style="text-align: center;">Your resistance to various <a class="wiki_link" title="Elden Ring Poison" href="#" target="">Poisons</a>&nbsp;and <a class="wiki_link" title="Elden Ring Scarlet Rot" href="#">Scarlet Rot</a>. The higher the number, the less susceptible you are to poison and rot. Governed by your attributes, as well as armor and additional effects.&nbsp;</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Robustness" href="#" target="">Robustness</a></h4>
+                                            <p style="text-align: center;">Your resistance to <a class="wiki_link" title="Elden Ring Hemorrhage" href="#" target="">Hemorrhage</a> and <a class="wiki_link" title="Elden Ring Frostbite" href="#" target="">Frostbite</a>. The higher the number, the lower your susceptibility. Governed by your attributes, as well as protective gear, and active passive effects.&nbsp;</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Focus" href="#" target="">Focus</a></h4>
+                                            <p style="text-align: center;">Your resistance to <a class="wiki_link" title="Elden Ring Sleep" href="#" target="">Sleep</a> and bouts of <a class="wiki_link" title="Elden Ring Madness" href="#" target="">Madness</a>. The higher the number, the lower your susceptibility. Governed by your attributes, as well as protective gear, and active passive effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Vitality" href="#" target="">Vitality</a></h4>
+                                            <p style="text-align: center;">Your resistance to <a class="wiki_link" title="Elden Ring Instant Death" href="#">Instant Death</a>. The higher the number, the lower your susceptibility. Governed by your attributes, as well as defensive gear and any additional effects.&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Physical Defense" href="#" target="">Physical Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Standard Damage" href="#" target="">Standard Physical Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and&nbsp;any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Strike Defense" href="#" target="">VS Strike Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Strike Damage" href="#" target="">Striking Physical Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Slash Defense" href="#" target="">VS Slash Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Slash Damage" href="#" target="">Slashing Physical Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Pierce Defense" href="#" target="">VS Pierce Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Pierce Damage" href="#" target="">Piercing Physical Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Magic Defense" href="#" target="">Magic Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Magic Damage" href="#" target="">Magical Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Fire Defense" href="#" target="">Fire Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Fire Damage" href="#" target="">Fire Elemental Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Lightning Defense"  target="">Lightning Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Lightning Damage" href="#" target="">Lightning Elemental Attacks</a>. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Holy Defense" href="#" target="">Holy Defense</a></h4>
+                                            <p style="text-align: center;">Your defense power and damage negation against <a class="wiki_link" title="Elden Ring Holy Damage" href="#" target="">Holy Elemental Attacks</a>. Your body's defense power is determined by your attributes. Damage negation is determined by <a class="wiki_link" title="Elden Ring Armor" href="/Armor" target="">Armor</a> and any additional effects.&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p><div data-adunit-name="i-scroll-ad-976be2eb-e403-4e5d-850f-3401b421b6d8" style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; margin: 8px 0px; min-height: 90px;"><div id="i-scroll-ad-976be2eb-e403-4e5d-850f-3401b421b6d8" style="width: 100%; justify-content: center; flex-direction: column; align-items: center; min-height: 90px;"></div></div>
+                                    <h3 class="special" style="text-align: center;">Equipment Stats</h3>
+                                    <p><a class="wiki_link" title="Elden Ring Weapons" href="#" target="">Weapons</a> and <a class="wiki_link" title="Elden Ring Armor" href="#" target="">Armor</a> Stats provide useful information about the benefits provided by the equipment.</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Weight" href="#" target="">Weight</a></h4>
+                                            <p style="text-align: center;">Weight of the equipment.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Strike Damage Negation" href="#" target="">VS Strike Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Strike Damage" href="#" target="">Striking Physical Damage</a>&nbsp;is negated.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Slash Damage Negation" href="#" target="">VS Slash Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Slash Damage" href="#" target="">Slashing Physical Damage</a>&nbsp;is negated.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring VS Pierce Damage Negation" href="#" target="">VS Pierce Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Pierce Damage" href="#" target="">Piercing Physical Damage</a>&nbsp;is negated.</p>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Magic Damage Negation" href="#" target="">Magic Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Magic Damage" href="#" target="">Magic Damage</a> is negated.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Fire Damage Negation" href="#" target="">Fire Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Fire Damage" href="#" target="">Fire Damage</a> is negated.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Lightning Damage Negation" href="#" target="">Lightning Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Lightning Damage" href="#" target="">Lightning Damage</a> is negated.</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h4 style="text-align: center;"><a class="wiki_link" title="Elden Ring Holy Damage Negation" href="#" target="">Holy Damage Negation</a></h4>
+                                            <p style="text-align: center;">The degree to which incoming <a class="wiki_link" title="Elden Ring Holy Damage" href="#" target="">Holy Damage</a> is negated.</p>
+                                        </div>
+                                    </div>
+                                    <p style="text-align: center;">&nbsp;</p>
+
+
+
+                                </div>
+                                <br><br><br>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

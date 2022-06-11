@@ -140,6 +140,20 @@
           <Property Name="Weigth" Type="float" Nullable="false" />
           <Property Name="Effect" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="Stat">
+          <Key>
+            <PropertyRef Name="Stat_ID" />
+          </Key>
+          <Property Name="Stat_ID" Type="int" Nullable="false" />
+          <Property Name="HP" Type="int" />
+          <Property Name="FP" Type="int" />
+          <Property Name="Stamina" Type="int" />
+          <Property Name="Eload" Type="float" />
+          <Property Name="Phy_def" Type="float" />
+          <Property Name="Mag_def" Type="float" />
+          <Property Name="Holy_def" Type="float" />
+          <Property Name="Arc_vita" Type="float" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -479,6 +493,7 @@
           <EntitySet Name="Equipment_Type" EntityType="Self.Equipment_Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Likes" EntityType="Self.Likes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ring" EntityType="Self.Ring" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stat" EntityType="Self.Stat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Feed" EntityType="Self.User_Feed" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -1183,6 +1198,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Stats" EntityType="EDEN_RINGModel.Stat" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -1195,6 +1211,20 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="Stat">
+          <Key>
+            <PropertyRef Name="Stat_ID" />
+          </Key>
+          <Property Name="Stat_ID" Type="Int32" Nullable="false" />
+          <Property Name="HP" Type="Int32" />
+          <Property Name="FP" Type="Int32" />
+          <Property Name="Stamina" Type="Int32" />
+          <Property Name="Eload" Type="Double" />
+          <Property Name="Phy_def" Type="Double" />
+          <Property Name="Mag_def" Type="Double" />
+          <Property Name="Holy_def" Type="Double" />
+          <Property Name="Arc_vita" Type="Double" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1402,6 +1432,21 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EDEN_RINGModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EDEN_RINGModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Stats">
+            <EntityTypeMapping TypeName="EDEN_RINGModel.Stat">
+              <MappingFragment StoreEntitySet="Stat">
+                <ScalarProperty Name="Arc_vita" ColumnName="Arc_vita" />
+                <ScalarProperty Name="Holy_def" ColumnName="Holy_def" />
+                <ScalarProperty Name="Mag_def" ColumnName="Mag_def" />
+                <ScalarProperty Name="Phy_def" ColumnName="Phy_def" />
+                <ScalarProperty Name="Eload" ColumnName="Eload" />
+                <ScalarProperty Name="Stamina" ColumnName="Stamina" />
+                <ScalarProperty Name="FP" ColumnName="FP" />
+                <ScalarProperty Name="HP" ColumnName="HP" />
+                <ScalarProperty Name="Stat_ID" ColumnName="Stat_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

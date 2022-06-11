@@ -133,6 +133,7 @@
     <Compile Include="Controllers\Equipment_infoController.cs" />
     <Compile Include="Controllers\Equipment_TypeController.cs" />
     <Compile Include="Controllers\RingsController.cs" />
+    <Compile Include="Controllers\StatsController.cs" />
     <Compile Include="Controllers\UserControler\HomePageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +182,9 @@
       <DependentUpon>ModelEden.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ModelEden.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stat.cs">
       <DependentUpon>ModelEden.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
@@ -272,6 +276,19 @@
     <Content Include="Views\Classes\Details.cshtml" />
     <Content Include="Views\Classes\Edit.cshtml" />
     <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Stats\Create.cshtml" />
+    <Content Include="Views\Stats\Delete.cshtml" />
+    <Content Include="Views\Stats\Details.cshtml" />
+    <Content Include="Views\Stats\Edit.cshtml" />
+    <Content Include="Views\Stats\Index.cshtml" />
+    <Content Include="Views\Stats\Vigor.cshtml" />
+    <Content Include="Views\Stats\Mind.cshtml" />
+    <Content Include="Views\Stats\Endurance.cshtml" />
+    <Content Include="Views\Stats\Strength.cshtml" />
+    <Content Include="Views\Stats\Dexterity.cshtml" />
+    <Content Include="Views\Stats\Intelligence.cshtml" />
+    <Content Include="Views\Stats\Faith.cshtml" />
+    <Content Include="Views\Stats\Arcane.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

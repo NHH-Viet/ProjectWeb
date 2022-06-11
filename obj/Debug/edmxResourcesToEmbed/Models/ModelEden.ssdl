@@ -135,6 +135,20 @@
     <Property Name="Weigth" Type="float" Nullable="false" />
     <Property Name="Effect" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="Stat">
+    <Key>
+      <PropertyRef Name="Stat_ID" />
+    </Key>
+    <Property Name="Stat_ID" Type="int" Nullable="false" />
+    <Property Name="HP" Type="int" />
+    <Property Name="FP" Type="int" />
+    <Property Name="Stamina" Type="int" />
+    <Property Name="Eload" Type="float" />
+    <Property Name="Phy_def" Type="float" />
+    <Property Name="Mag_def" Type="float" />
+    <Property Name="Holy_def" Type="float" />
+    <Property Name="Arc_vita" Type="float" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -474,6 +488,7 @@
     <EntitySet Name="Equipment_Type" EntityType="Self.Equipment_Type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Likes" EntityType="Self.Likes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ring" EntityType="Self.Ring" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stat" EntityType="Self.Stat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User_Feed" EntityType="Self.User_Feed" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />

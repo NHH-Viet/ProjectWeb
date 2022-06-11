@@ -608,6 +608,7 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Stats" EntityType="EDEN_RINGModel.Stat" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -620,4 +621,18 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="Stat">
+    <Key>
+      <PropertyRef Name="Stat_ID" />
+    </Key>
+    <Property Name="Stat_ID" Type="Int32" Nullable="false" />
+    <Property Name="HP" Type="Int32" />
+    <Property Name="FP" Type="Int32" />
+    <Property Name="Stamina" Type="Int32" />
+    <Property Name="Eload" Type="Double" />
+    <Property Name="Phy_def" Type="Double" />
+    <Property Name="Mag_def" Type="Double" />
+    <Property Name="Holy_def" Type="Double" />
+    <Property Name="Arc_vita" Type="Double" />
+  </EntityType>
 </Schema>
