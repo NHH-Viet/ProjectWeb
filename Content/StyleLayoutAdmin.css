@@ -1,0 +1,28 @@
+﻿body {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("https://eldenring.wiki.fextralife.com/file/Elden-Ring/elden-ring-wiki-guide-walkthrough-background-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+th, td, tr{
+    border: solid 1px;
+    text-align: center;
+}
+
+table {
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+
+}
+
+.form-control {
+    background-color: black;
+    color: white;
+}
+a{color:yellow}

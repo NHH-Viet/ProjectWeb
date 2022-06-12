@@ -18,12 +18,12 @@
             <tr>
                 <th colspan="2">
                     <div class="col-md-10">
+                        @Html.LabelFor(model => model.E_Name, "Name: ", htmlAttributes: new { @class = "control-label col-md-2" })
                         @Html.EditorFor(model => model.E_Name, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.E_Name, "", new { @class = "text-danger" })
                     </div>
-                </th>
-                <th>
                     <div class="col-md-10">
+                        @Html.LabelFor(model => model.E_ID, "ID: ", htmlAttributes: new { @class = "control-label col-md-2" })                        
                         @Html.EditorFor(model => model.E_ID, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.E_ID, "", new { @class = "text-danger" })
                     </div>
@@ -34,80 +34,83 @@
             </tr>
             <tr>
                 <td>
-                    <img style="float: left;" title="Attack Power" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attack-power-elden-ring-wiki-guide-18.png" alt="attack power elden ring wiki guide 18" width="18" height="18">Attack
+                    <img style="text-align : center;" title="Attack Power" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attack-power-elden-ring-wiki-guide-18.png" alt="attack power elden ring wiki guide 18" width="18" height="18">Attack
                     <div class="lineleft">
-                        <a class="wiki_link" style="color: peachpuff;" title="Elden Ring Physical Damage" href="/Physical+Damage">Phy</a>
-                        <div class="col-md-2">
+                        <a class="wiki_link" style="color: peachpuff; float: left; width:50px" title="Elden Ring Physical Damage" href="/Physical+Damage">Phy</a>
+                        
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Phy_dame, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Phy_dame, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" style="color: #3fbddd;" title="Elden Ring Magic Damage" href="/Magic+Damage">Mag</a>&nbsp;
-                        <div class="col-md-10">
+
+                        <a class="wiki_link" style="color: #3fbddd; float: left; width: 50px" title="Elden Ring Magic Damage" href="/Magic+Damage">Mag</a>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Mag_dame, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Mag_dame, "", new { @class = "text-danger" })
                         </div>
+
                         <br>
-                        <span style="color: #ff9900;"><a class="wiki_link" style="color: #cc9d57;" title="Elden Ring Fire Damage" href="/Fire+Damage">Fire</a></span>&nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ff9900;"><a class="wiki_link" style="color: #cc9d57; float: left; width: 50px" title="Elden Ring Fire Damage" href="/Fire+Damage">Fire</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Fire_dame, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Fire_dame, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #ffff00;"><a class="wiki_link" style="color: #d5d559;" title="Elden Ring Lightning Damage" href="/Lightning+Damage">Ligt</a></span>&nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ffff00;"><a class="wiki_link" style="color: #d5d559; float: left; width: 50px" title="Elden Ring Lightning Damage" href="/Lightning+Damage">Ligt</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Ligh_dame, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Ligh_dame, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #ffcc99;"><a class="wiki_link" style="color: #ffcc99;" title="Elden Ring Holy Damage" href="/Holy+Damage">Holy</a></span>&nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ffcc99;"><a class="wiki_link" style="color: #ffcc99;float:left; width: 50px" title="Elden Ring Holy Damage" href="/Holy+Damage">Holy</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Holy_dame, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Holy_dame, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #ff0000;"><a class="wiki_link" style="color: #c64949;" title="Elden Ring Critical Damage" href="/Critical+Damage">Crit</a></span>&nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ff0000;"><a class="wiki_link" style="color: #c64949; float: left; width: 50px" title="Elden Ring Critical Damage" href="/Critical+Damage">Crit</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Critboot, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Critboot, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </td>
                 <td>
-                    <img style="float: left;" title="Guarded Damage Negation" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/guarded-damage-negation-elden-ring-wiki-guide-18.png" alt="guarded damage negation elden ring wiki guide 18" width="18" height="18">Guard
+                    <img style="text-align: center;" title="Guarded Damage Negation" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/guarded-damage-negation-elden-ring-wiki-guide-18.png" alt="guarded damage negation elden ring wiki guide 18" width="18" height="18">Guard
                     <div class="lineleft">
-                        Phy&nbsp;
-                        <div class="col-md-10">
+                        <a class="wiki_link" style="color: peachpuff; float: left; width:50px" title="Elden Ring Physical Damage" href="/Physical+Damage">Phy</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Phy_guard, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Phy_guard, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #3fbddd;">Mag</span>&nbsp;
-                        <div class="col-md-10">
+                        <a class="wiki_link" style="color: #3fbddd; float: left; width: 50px" title="Elden Ring Magic Damage" href="/Magic+Damage">Mag</a>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Mag_guard, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Mag_guard, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #cc9d57;">Fire</span> &nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ff9900;"><a class="wiki_link" style="color: #cc9d57; float: left; width: 50px" title="Elden Ring Fire Damage" href="/Fire+Damage">Fire</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Fire_guard, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Fire_guard, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #d5d559;">Ligt</span> &nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ffff00;"><a class="wiki_link" style="color: #d5d559; float: left; width: 50px" title="Elden Ring Lightning Damage" href="/Lightning+Damage">Ligt</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Ligh_guard, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Ligh_guard, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #ffcc99;">Holy</span> &nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #ffcc99;"><a class="wiki_link" style="color: #ffcc99;float:left; width: 50px" title="Elden Ring Holy Damage" href="/Holy+Damage">Holy</a></span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Holy_guard, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Holy_guard, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <span style="color: #666699;">Boost</span>&nbsp;
-                        <div class="col-md-10">
+                        <span style="color: #666699; float: left; width: 50px">Boost</span>&nbsp;
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Guardboot, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Guardboot, "", new { @class = "text-danger" })
                         </div>
@@ -116,68 +119,68 @@
             </tr>
             <tr>
                 <td>
-                    <img title="Attribute Scaling" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attribute-scaling-elden-ring-wiki-guide-18.png" alt="attribute scaling elden ring wiki guide 18" width="18" height="18">Scaling
+                    <img style="text-align : center;" title="Attribute Scaling" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attribute-scaling-elden-ring-wiki-guide-18.png" alt="attribute scaling elden ring wiki guide 18" width="18" height="18">Scaling
                     <div class="lineleft">
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Str</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Str</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Scl_Str, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Scl_Str, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Dex</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Dex</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Scl_Dex, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Scl_Dex, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Int</a>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.R_Scl_Int, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.R_Scl_Int, "", new { @class = "text-danger" })
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Int</a>
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Scl_Int, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Scl_Int, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Fai</a>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.R_Scl_Fai, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.R_Scl_Fai, "", new { @class = "text-danger" })
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Fai</a>
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Scl_Fai, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Scl_Fai, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Arc</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Arc</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.Scl_Arc, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Scl_Arc, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </td>
                 <td>
-                    <img style="float: left;" title="Attributes Requirement" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attributes-required-elden-ring-wiki-guide-18.png" alt="attributes required elden ring wiki guide 18" width="18" height="18">Requires
+                    <img style="text-align : center;" title="Attributes Requirement" src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/attributes-required-elden-ring-wiki-guide-18.png" alt="attributes required elden ring wiki guide 18" width="18" height="18">Requires
                     <div class="lineleft">
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Str</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Str</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.R_Scl_Str, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.R_Scl_Str, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Dex</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Dex</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.R_Scl_Dex, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.R_Scl_Dex, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Int</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Int</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.R_Scl_Int, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.R_Scl_Int, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Fai</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Fai</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.R_Scl_Fai, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.R_Scl_Fai, "", new { @class = "text-danger" })
                         </div>
                         <br>
-                        <a class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Arc</a>
-                        <div class="col-md-10">
+                        <a style="float: left; width: 50px" class="wiki_link" title="Elden Ring Strength" href="/Strength" target="">Arc</a>
+                        <div class="col-md-9">
                             @Html.EditorFor(model => model.R_Scl_Arc, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.R_Scl_Arc, "", new { @class = "text-danger" })
                         </div>
