@@ -68,11 +68,15 @@
     string ten = item.A_Name;
     string temp = ten.ToLower().Replace(" ", "_").Replace("'", "") + "_";
     string tenitem = temp;
-    string duoi = "_elden_ring_wiki_guide_200px.png";
+    string duoi = "elden_ring_wiki_guide_200px.png";
     string than = ViewBag.typeName;
     string result = dau + tenitem + duoi;
-<tr>
+<tr style="color : white">
     <td>
+        <a style="text-decoration-line:none;" href="@Url.Action("Details", "Equipment_info", new { id = item.A_ID })">
+            <img height="100" width="100" src="@result" alt="Alternate Text" />
+        </a>
+        <br />
         @Html.DisplayFor(modelItem => item.A_Name)
     </td>
     <td>

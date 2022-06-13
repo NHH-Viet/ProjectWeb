@@ -323,12 +323,15 @@ VALUES (6,9,15,9,8,12,16,7,9,'Astrologer','1'),
 (9,15,10,11,14,13,9,9,7,'Vagabond','8'),
 (8,11,12,11,10,16,10,8,9,'Warrior','9'),
 (1,10,10,10,10,10,10,10,10,'Wretch','10')
+<<<<<<< HEAD
 GO
 ALTER TABLE Classes
 ADD Arc smallint NOT NULL;
+=======
+>>>>>>> ca41231918a56a00b9e94271dc901e9748b93e79
 GO
 ALTER TABLE Classes
-ADD CONSTRAINT Min_check CHECK (Level>0);
+ADD Arc smallint NOT NULL;
 GO
 CREATE TABLE Users
 (
@@ -512,8 +515,6 @@ VALUES (1,300,40,80,45.0),
 (98,2097,447,169,159.0),
 (99,2100,450,170,160.0)
 GO
-DROP TABLE Stat
-
 
 
 
