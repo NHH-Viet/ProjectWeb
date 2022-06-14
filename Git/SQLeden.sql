@@ -112,22 +112,54 @@ GO
 CREATE TABLE Classes_build
 (
 	Build_ID varchar(10) PRIMARY KEY,
-	User_ID varchar(50) FOREIGN KEY REFERENCES Users(User_ID) ,
-	Class_ID nvarchar(10) NOT NULL FOREIGN KEY REFERENCES Classes(Class_ID),
-	Head_ID nvarchar(10) FOREIGN KEY REFERENCES Armor_info(A_ID),
-	Chest_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID),
-	Hand_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID),
-	Leg_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID),
-	Left_hand1_ID nvarchar(10)  FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Left_hand2_ID nvarchar(10)  FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Left_hand3_ID nvarchar(10)	FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Right_hand1_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Right_hand2_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Right_hand3_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID),
-	Ring1_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) ,
-	Ring2_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) ,
-	Ring3_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) ,
-	Ring4_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) ,
+	User_ID varchar(50) FOREIGN KEY REFERENCES Users(User_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Class_ID nvarchar(10) NOT NULL FOREIGN KEY REFERENCES Classes(Class_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Head_ID nvarchar(10) FOREIGN KEY REFERENCES Armor_info(A_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Chest_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Hand_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Leg_ID nvarchar(10)  FOREIGN KEY REFERENCES Armor_info(A_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Left_hand1_ID nvarchar(10)  FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Left_hand2_ID nvarchar(10)  FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Left_hand3_ID nvarchar(10)	FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Right_hand1_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Right_hand2_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Right_hand3_ID nvarchar(10) FOREIGN KEY REFERENCES Equipment_info(E_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Ring1_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Ring2_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Ring3_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	Ring4_ID nvarchar(10) FOREIGN KEY REFERENCES Ring(Ring_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
 	Levels smallint NOT NULL,
 	Vigor smallint NOT NULL,	
 	Mind smallint NOT NULL,
@@ -143,7 +175,9 @@ CREATE TABLE Comment
 (
 	Comment_ID varchar(20) PRIMARY KEY,
 	Pages nvarchar NOT null,
-	User_ID varchar(50) NOT NULL FOREIGN KEY REFERENCES Users(User_ID) ,
+	User_ID varchar(50) NOT NULL FOREIGN KEY REFERENCES Users(User_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
 	Texts nvarchar,
 	C_Date date,
 	Likes int,
@@ -152,14 +186,20 @@ GO
 CREATE TABLE Likes
 (
 	Like_ID varchar(20) PRIMARY KEY,
-	Comment_ID varchar(20) FOREIGN KEY REFERENCES Comment(Comment_ID) ,
+	Comment_ID varchar(20) FOREIGN KEY REFERENCES Comment(Comment_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
 )
 GO
 CREATE TABLE User_Feed
 (
 	Feed_ID varchar(20) PRIMARY KEY,
-	Comment_ID varchar(20) NOT NULL FOREIGN KEY REFERENCES Comment(Comment_ID) ,
-	User_ID varchar(50) NOT NULL FOREIGN KEY REFERENCES Users(User_ID) ,
+	Comment_ID varchar(20) NOT NULL FOREIGN KEY REFERENCES Comment(Comment_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+	User_ID varchar(50) NOT NULL FOREIGN KEY REFERENCES Users(User_ID) 
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
 	Feed_Date date ,
 )
 go
