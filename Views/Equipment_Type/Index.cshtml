@@ -12,8 +12,8 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
+<table class="table ">
+    <tr style="color: white">
         <th>
             @Html.DisplayNameFor(model => model.Type_Names)
         </th>
@@ -28,12 +28,12 @@
         string than = item.Type_Names;
         string result = dau + tenitem + than + duoi;
 
-        <tr>
-            <td>
+        <tr style="color: white">
+            <td style="color: white">
                 <img src="@result" alt="Alternate Text" />
               
             </td>
-            <td>
+            <td style="color: white">
                 @Html.DisplayFor(modelItem => item.Type_Names)
             </td>
             <td>

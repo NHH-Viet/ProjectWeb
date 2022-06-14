@@ -1,34 +1,34 @@
 ﻿@model IEnumerable<projectE.Models.Equipment_Type>
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "IndexUser";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<table class="table" style="background-color : black; opacity:0.8; text-align:center">
-    <tr>
+<table class="table col-4" style="background-color : black; opacity:0.8; text-align:center">
 
-        @foreach (var item in Model)
-        {
-            string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
-            string tenitem = "parrying_dagger_";
-            string duoi = "_weapon_elden_ring_wiki_guide_200px.png";
-            string than = item.Type_Names;
-            string result = dau + tenitem + than + duoi;
-
-
-            <td>
+    @foreach (var item in Model)
+    {
+        string dau = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/";
+        string tenitem = "parrying_dagger_";
+        string duoi = "_weapon_elden_ring_wiki_guide_200px.png";
+        string than = item.Type_Names;
+        string result = dau + tenitem + than + duoi;
+        <tr style="color:white">
+            <td class="col-4">
                 <a href="@Url.Action("Index", "Equipment_info", new { id = item.ET_ID }, "")">
                     <img src="@result" alt="Alternate Text" />
                 </a>
+                </td>
+            <td>
                 <br />
                 @Html.DisplayFor(modelItem => item.Type_Names)
             </td>
+        </tr>
 
 
-        }
+    }
 
-    </tr>
-   
+
 
 </table>
 

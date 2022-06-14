@@ -15,12 +15,9 @@ namespace projectE.Controllers
         private EDEN_RINGEntities db = new EDEN_RINGEntities();
 
         // GET: Equipment_Type
-        public ActionResult Index()
+        public ActionResult IndexUser()
         {
-            bool checkuser = true;
-            if (checkuser)
-                return View("IndexUser",db.Equipment_Type.ToList());   
-            return View(db.Equipment_Type.ToList());
+            return View("IndexUser",db.Equipment_Type.ToList());
         }
 
         // GET: Equipment_Type/Details/5
