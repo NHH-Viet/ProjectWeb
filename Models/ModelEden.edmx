@@ -115,8 +115,8 @@
           <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Scl_Arc" Type="char" MaxLength="1" />
           <Property Name="R_Scl_Arc" Type="smallint" />
-          <Property Name="SKill_Cost" Type="nvarchar" MaxLength="20" />
-          <Property Name="SNames" Type="nvarchar" MaxLength="20" />
+          <Property Name="Skill_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="SCost" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Equipment_Type">
           <Key>
@@ -733,8 +733,8 @@
           <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_info" ToRole="Equipment_Type" />
           <Property Name="Scl_Arc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="R_Scl_Arc" Type="Int16" />
-          <Property Name="SKill_Cost" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="SNames" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Skill_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SCost" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Equipment_Type">
           <Key>
@@ -1320,8 +1320,8 @@
           <EntitySetMapping Name="Equipment_info">
             <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_info">
               <MappingFragment StoreEntitySet="Equipment_info">
-                <ScalarProperty Name="SNames" ColumnName="SNames" />
-                <ScalarProperty Name="SKill_Cost" ColumnName="SKill_Cost" />
+                <ScalarProperty Name="SCost" ColumnName="SCost" />
+                <ScalarProperty Name="Skill_name" ColumnName="Skill_name" />
                 <ScalarProperty Name="R_Scl_Arc" ColumnName="R_Scl_Arc" />
                 <ScalarProperty Name="Scl_Arc" ColumnName="Scl_Arc" />
                 <ScalarProperty Name="E_ID" ColumnName="E_ID" />

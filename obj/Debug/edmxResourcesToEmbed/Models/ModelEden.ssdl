@@ -110,8 +110,8 @@
     <Property Name="ET_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="Scl_Arc" Type="char" MaxLength="1" />
     <Property Name="R_Scl_Arc" Type="smallint" />
-    <Property Name="SKill_Cost" Type="nvarchar" MaxLength="20" />
-    <Property Name="SNames" Type="nvarchar" MaxLength="20" />
+    <Property Name="Skill_name" Type="nvarchar" MaxLength="20" />
+    <Property Name="SCost" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Equipment_Type">
     <Key>

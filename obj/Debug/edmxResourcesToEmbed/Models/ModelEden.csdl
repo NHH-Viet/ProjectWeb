@@ -142,8 +142,8 @@
     <NavigationProperty Name="Equipment_Type" Relationship="Self.FK__Equipment__ET_ID__267ABA7A" FromRole="Equipment_info" ToRole="Equipment_Type" />
     <Property Name="Scl_Arc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="R_Scl_Arc" Type="Int16" />
-    <Property Name="SKill_Cost" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="SNames" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Skill_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SCost" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Equipment_Type">
     <Key>

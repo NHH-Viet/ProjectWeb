@@ -88,8 +88,8 @@
     <EntitySetMapping Name="Equipment_info">
       <EntityTypeMapping TypeName="EDEN_RINGModel.Equipment_info">
         <MappingFragment StoreEntitySet="Equipment_info">
-          <ScalarProperty Name="SNames" ColumnName="SNames" />
-          <ScalarProperty Name="SKill_Cost" ColumnName="SKill_Cost" />
+          <ScalarProperty Name="SCost" ColumnName="SCost" />
+          <ScalarProperty Name="Skill_name" ColumnName="Skill_name" />
           <ScalarProperty Name="R_Scl_Arc" ColumnName="R_Scl_Arc" />
           <ScalarProperty Name="Scl_Arc" ColumnName="Scl_Arc" />
           <ScalarProperty Name="E_ID" ColumnName="E_ID" />

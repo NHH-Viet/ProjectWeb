@@ -51,8 +51,8 @@ namespace projectE.Models
         public string ET_ID { get; set; }
         public string Scl_Arc { get; set; }
         public Nullable<short> R_Scl_Arc { get; set; }
-        public string SKill_Cost { get; set; }
-        public string SNames { get; set; }
+        public string Skill_name { get; set; }
+        public string SCost { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Classes_build> Classes_build { get; set; }
