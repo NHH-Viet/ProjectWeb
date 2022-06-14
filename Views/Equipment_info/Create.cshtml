@@ -190,7 +190,7 @@
             </tr>
             <tr>
                 <td>
-                    <a class="wiki_link" title="Elden Ring Daggers" href="/Daggers" target="">Type</a>
+                    <a class="wiki_link" title="Elden Ring Daggers" ">Type</a>
                     <div class="col-md-10">
                         @Html.DropDownList("ET_ID", null, htmlAttributes: new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ET_ID, "", new { @class = "text-danger" })
@@ -200,16 +200,23 @@
             </tr>
             <tr>
                 <td>
-                    <a class="wiki_link" title="Elden Ring Quickstep" href="/Quickstep" target="">SKill</a>
+                    <a class="wiki_link" title="Elden Ring Quickstep" >SKill</a>
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.SKill_Cost, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.SKill_Cost, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.Skill_name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Skill_name, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+                <td>
+                    <a class="wiki_link" title="Elden Ring Quickstep"  >SKill</a>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SCost, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SCost, "", new { @class = "text-danger" })
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a class="wiki_link" title="Elden Ring Weight" href="/Weight">Wgt.</a>
+                    <a class="wiki_link" title="Elden Ring Weight">Wgt.</a>
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.Weigth, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.Weigth, "", new { @class = "text-danger" })

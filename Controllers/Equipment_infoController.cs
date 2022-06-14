@@ -88,7 +88,7 @@ namespace projectE.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,SKill_Cost,ET_ID")] Equipment_info equipment_info)
+        public ActionResult Create([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,Skill_name,SCost,ET_ID")] Equipment_info equipment_info)
         {
             if (ModelState.IsValid)
             {
@@ -122,7 +122,7 @@ namespace projectE.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,SKill_Cost,ET_ID")] Equipment_info equipment_info)
+        public ActionResult Edit([Bind(Include = "E_ID,E_Name,Phy_dame,Phy_guard,Mag_dame,Mag_guard,Fire_dame,Fire_guard,Ligh_dame,Ligh_guard,Holy_dame,Holy_guard,Critboot,Guardboot,Weigth,Scl_Str,Scl_Dex,Scl_Int,Scl_Fai,Scl_Arc,R_Scl_Str,R_Scl_Dex,R_Scl_Int,R_Scl_Fai,R_Scl_Arc,Skill_name,SCost,ET_ID")] Equipment_info equipment_info)
         {
             if (ModelState.IsValid)
             {

@@ -127,7 +127,8 @@
                 @Html.DisplayFor(modelItem => item.Weigth)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SKill_Cost)
+                @Html.DisplayFor(modelItem => item.Skill_name)<br />
+                @Html.DisplayFor(modelItem => item.SCost)
             </td>
             <td>
                 @if (!bool.Parse(ViewBag.isUser)) { Html.ActionLink("Edit", "Edit", new { id = item.E_ID }); }
